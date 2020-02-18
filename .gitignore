@@ -1,0 +1,11 @@
+layouts/
+.idea/
+*.log
+*.lock
+*.ai
+*.pdf
+*.psd
+.DS_Store
+.vscode
+.publish
+Thumbs.db
