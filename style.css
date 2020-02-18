@@ -1,0 +1,96 @@
+@font-face {
+  font-family: 'latobold';
+  src: url('./assets/fonts/lato-bold-webfont.woff2') format('woff2'),
+        url('./assets/fonts/lato-bold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'latolight';
+  src: url('./assets/fonts/lato-light-webfont.woff2') format('woff2'),
+        url('./assets/fonts/lato-light-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'latoregular';
+  src: url('./assets/fonts/lato-regular-webfont.woff2') format('woff2'),
+        url('./assets/fonts/lato-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'latoblack';
+  src: url('./assets/fonts/lato-black-webfont.woff2') format('woff2'),
+        url('./assets/fonts/lato-black-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Lato", "Verdana", sans-serif;
+  font-size: 10px;
+  line-height: 1.5rem;
+  font-weight: 400;
+  color: #323232;
+
+  background-color: antiquewhite;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+/* img {
+  max-width: 100%;
+  height: auto;
+} */
+
+svg path {
+  fill: inherit;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.wrapper {
+  width: 1020px;
+  padding: 40px;
+  margin: 0 auto;
+
+  background-color: pink; /* temp style */
+}
