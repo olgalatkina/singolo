@@ -250,8 +250,10 @@ svg path {
 /* Services */
 
 .services {
+  height: 500px;
   padding-top: 62px;
   background-color: #f2f2f2;
+  border-bottom: 6px solid #ffffff;
 }
 
 .services__title {
@@ -266,21 +268,90 @@ svg path {
 }
 
 .services__intro {
+  margin-bottom: 45px;
+
   font-size: 18px;
   line-height: 1.7em;
   font-family: "Lato";
   font-weight: 300;
 }
 
+.services__list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.services__features {
+  position: relative;
+  width: 320px;
+  padding: 0 20px 32px 80px;
+}
+
+.services__features::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 1px;
+
+  width: 59px;
+  height: 59px;
+  border: 2px solid #666d89;
+  border-radius: 50%;
+
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.services__features--pen::before {
+  background-image: url(assets/images/ico-pen.svg);
+}
+
+.services__features--bulb::before {
+  background-image: url(assets/images/ico-bulb.svg);
+}
+
+.services__features--heart::before {
+  background-image: url(assets/images/ico-heart.svg);
+}
+
+.services__features--phone::before {
+  background-image: url(assets/images/ico-phone.svg);
+}
+
+.services__features--bubble::before {
+  background-image: url(assets/images/ico-bubble.svg);
+}
+
+.services__features--star::before {
+  background-image: url(assets/images/ico-star.svg);
+}
+
+.services__features:nth-child(3n) {
+  width: 300px;
+  padding-right: 0;
+}
+
 .services__f-title {
+  margin-bottom: 10px;
+
   font-size: 18px;
   line-height: 1em;
+  letter-spacing: -0.15px;
   font-family: "Lato";
   font-weight: 900;
   color: #666d89;
 }
 
+.crutch {
+  letter-spacing: 2.6px;
+}
+
 .services__f-description {
+  max-height: 63px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
   font-size: 12px;
   line-height: 1.8em;
   font-family: "Lato";
