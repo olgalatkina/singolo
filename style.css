@@ -220,7 +220,11 @@ svg path {
 }
 
 .phone--vertical {
-  margin-right: 73px;
+  margin-right: 72px;
+}
+
+.phone--horizontal {
+  margin-top: -2px;
 }
 
 .phone__inner {
@@ -245,10 +249,10 @@ svg path {
   left: 60px;
 
   width: 334px;
-  height: 188px;
+  height: 189px;
 
   background-image: url(assets/images/LayerHorizontal.png);
-  background-position: -125px -119px;
+  background-position: -124px -118px;
   background-color: #81cfd9;
 }
 
