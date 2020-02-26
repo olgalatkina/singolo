@@ -94,7 +94,7 @@
 
         <ul class="portfolio__classes">
           <li class="portfolio__class">
-            <button class="portfolio__button" type="button">All</button>
+            <button class="portfolio__button  portfolio__button--active" type="button">All</button>
           </li>
           <li class="portfolio__class">
             <button class="portfolio__button" type="button">Web Design</button>
@@ -168,6 +168,7 @@
               <img src="assets/images/image-12.png" alt="artwork" class="portfolio__image" width="220" height="187">
             </a>
           </li>
+
         </ul>
       </div>
     </section>
@@ -189,25 +190,25 @@
               <li>
                 <a href="#"  class="social__button  --facebook">
                   <span class="visually-hidden">facebook</span>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="8" height="14"><defs><image width="50" height="90" id="img1" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MCA5MSIgd2lkdGg9IjUwIiBoZWlnaHQ9IjkxIj4KCTxkZWZzPgoJCTxjbGlwUGF0aCBjbGlwUGF0aFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgaWQ9ImNwMSI+CgkJCTxwYXRoIGQ9Ik0wIDBMNTAgMEw1MCA5MEwwIDkwWiIgLz4KCQk8L2NsaXBQYXRoPgoJPC9kZWZzPgoJPHN0eWxlPgoJCXRzcGFuIHsgd2hpdGUtc3BhY2U6cHJlIH0KCQkuc2hwMCB7IGZpbGw6ICMwMDAwMDAgfSAKCTwvc3R5bGU+Cgk8ZyBpZD0iUGFnZSAxIiBjbGlwLXBhdGg9InVybCgjY3AxKSI+CgkJPHBhdGggaWQ9IlBhdGggMSIgY2xhc3M9InNocDAiIGQ9Ik01MCAxNS42NUwzNS43MiAxNS42NUMzNC4wMyAxNS42NSAzMi4xNCAxNy44NyAzMi4xNCAyMC44NEwzMi4xNCAzMS4xNUw1MCAzMS4xNUw1MCA0NS44NUwzMi4xNCA0NS44NUwzMi4xNCA5MEwxNS4yOCA5MEwxNS4yOCA0NS44NUwwIDQ1Ljg1TDAgMzEuMTVMMTUuMjggMzEuMTVMMTUuMjggMjIuNUMxNS4yOCAxMC4wOSAyMy45IDAgMzUuNzIgMEw1MCAwTDUwIDE1LjY1WiIgLz4KCTwvZz4KPC9zdmc+"/></defs><style></style><g id="About Us"><g id="Social Media"><g id="Facebook"><use id="facebook" href="#img1" transform="scale(.16 .156)"/></g></g></g></svg>
+
                 </a>
               </li>
               <li>
                 <a href="#" class="social__button  --google">
                   <span class="visually-hidden">google</span>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"><defs><image width="90" height="88" id="img1" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA5MCA4OSIgd2lkdGg9IjkwIiBoZWlnaHQ9Ijg5Ij4KCTxkZWZzPgoJCTxjbGlwUGF0aCBjbGlwUGF0aFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgaWQ9ImNwMSI+CgkJCTxwYXRoIGQ9Ik0wIDBMOTAgMEw5MCA4OEwwIDg4WiIgLz4KCQk8L2NsaXBQYXRoPgoJPC9kZWZzPgoJPHN0eWxlPgoJCXRzcGFuIHsgd2hpdGUtc3BhY2U6cHJlIH0KCQkuc2hwMCB7IGZpbGw6ICMwMDAwMDAgfSAKCTwvc3R5bGU+Cgk8ZyBpZD0iUGFnZSAxIiBjbGlwLXBhdGg9InVybCgjY3AxKSI+CgkJPHBhdGggaWQ9IlBhdGggMSIgZmlsbC1ydWxlPSJldmVub2RkIiBjbGFzcz0ic2hwMCIgZD0iTTg5LjYxIDM0LjQxTDg5LjYxIDQzLjkxTDc0LjYxIDQzLjkxTDc0LjYxIDU4LjkxTDY1LjExIDU4LjkxTDY1LjExIDQzLjkxTDUwLjExIDQzLjkxTDUwLjExIDM0LjQxTDY1LjExIDM0LjQxTDY1LjExIDE5LjQxTDc0LjYxIDE5LjQxTDc0LjYxIDM0LjQxTDg5LjYxIDM0LjQxWk0yOC4wMSAwTDUxIDBMNTEgMC41QzUxIDMuMDcgNDYuMzggMy41NiA0My4yMyAzLjk5QzQyLjE3IDQuMTQgNDAuMDIgNC4zNyAzOS40MiA0LjY4QzQ1LjI0IDcuNzggNDYuMTggMTIuNjcgNDYuMTggMTkuOTZDNDYuMTggMjguMjUgNDIuOTQgMzIuNjMgMzkuNDkgMzUuNzFDMzcuMzYgMzcuNjIgMzUuNjggMzkuMTIgMzUuNjggNDEuMTJDMzUuNjggNDMuMDkgMzcuOTggNDUuMTEgNDAuNjUgNDcuNDVDNDUuMDIgNTEuMjkgNTEgNTYuNTQgNTEgNjUuMzZDNTEgNzQuNDkgNDcuMDcgODEuMDMgMzkuMzMgODQuNzlDMzMuMzcgODcuNjkgMjYuOTQgODggMjQuNDUgODhDMjMuOTggODggMjMuNzEgODcuOTkgMjMuNjYgODcuOTlDMjMuNjYgODcuOTkgMjMuNDggODcuOTkgMjMuMTggODcuOTlDMTkuMzEgODcuOTkgMCA4Ny4xIDAgNjkuNTJDMCA1Mi4yMyAyMS4wMiA1MC44OSAyNy40NyA1MC44OUwyNy42NCA1MC44OUMyMy45MiA0NS45MiAyNC42OSA0MC45MSAyNC42OSA0MC45MUMyNC4zNiA0MC45MyAyMy44OCA0MC45NSAyMy4zIDQwLjk1QzIwLjg3IDQwLjk1IDE2LjE5IDQwLjU2IDEyLjE3IDM3Ljk3QzcuMjUgMzQuOCA0Ljc1IDI5LjQxIDQuNzUgMjEuOTRDNC43NSAwLjg2IDI3Ljc4IDAuMDEgMjguMDEgMFpNMjcuMjEgNTUuMzlDMjYuNyA1NS4zOSAyNi4xOSA1NS40MSAyNS42NyA1NS40NUMyMS4yNyA1NS43NyAxNy4yMiA1Ny40MiAxNC4yNyA2MC4wOUMxMS4zNyA2Mi43MiA5Ljg4IDY2LjAzIDEwLjEgNjkuNEMxMC41NCA3Ni40MyAxOC4wOSA4MC41NiAyNy4yNiA3OS44OUMzNi4zIDc5LjIzIDQyLjMxIDc0LjA0IDQxLjg3IDY3LjAxQzQxLjQ2IDYwLjM4IDM1LjcxIDU1LjM5IDI3LjIxIDU1LjM5Wk0yMy42MSA2LjI0QzIyLjk2IDYuMjQgMjIuMzEgNi4zMyAyMS42OSA2LjVDMTkuMDkgNy4yMyAxNy4wMyA5LjQxIDE1Ljg4IDEyLjYzQzE0LjcxIDE1LjkgMTQuNjIgMTkuMyAxNS42NCAyMy4xOUMxNy40NyAzMC4xMiAyMi4zOSAzNS4xNSAyNy4zNyAzNS4xNUMyOC4wMiAzNS4xNSAyOC42NyAzNS4wNiAyOS4yOSAzNC44OUMzNC43MiAzMy4zNiAzOC4xMiAyNS4wNiAzNS44NyAxNy4xM0MzMy40OCA4LjcyIDI5LjYyIDYuMjQgMjMuNjEgNi4yNFoiIC8+Cgk8L2c+Cjwvc3ZnPg=="/></defs><style></style><g id="About Us"><g id="Social Media"><g id="Google"><use id="google+" href="#img1" transform="scale(.156 .159)"/></g></g></g></svg>
+
                 </a>
               </li>
               <li>
                 <a href="#" class="social__button  --twitter">
                   <span class="visually-hidden">twitter</span>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="12"><defs><image width="92" height="75" id="img1" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA5MiA3NSIgd2lkdGg9IjkyIiBoZWlnaHQ9Ijc1Ij4KCTxkZWZzPgoJCTxjbGlwUGF0aCBjbGlwUGF0aFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgaWQ9ImNwMSI+CgkJCTxwYXRoIGQ9Ik0wIDBMOTIgMEw5MiA3NUwwIDc1WiIgLz4KCQk8L2NsaXBQYXRoPgoJPC9kZWZzPgoJPHN0eWxlPgoJCXRzcGFuIHsgd2hpdGUtc3BhY2U6cHJlIH0KCQkuc2hwMCB7IGZpbGw6ICMwMDAwMDAgfSAKCTwvc3R5bGU+Cgk8ZyBpZD0iUGFnZSAxIiBjbGlwLXBhdGg9InVybCgjY3AxKSI+CgkJPHBhdGggaWQ9IlBhdGggMSIgY2xhc3M9InNocDAiIGQ9Ik05MiA5LjA4Qzg4LjYxIDEwLjU4IDg0Ljk4IDExLjYgODEuMTYgMTIuMDZDODUuMDYgOS43MiA4OC4wNSA2LjAyIDg5LjQ2IDEuNjFDODUuODEgMy43NyA4MS43NyA1LjM1IDc3LjQ3IDYuMTlDNzQuMDMgMi41MiA2OS4xMiAwLjIzIDYzLjY5IDAuMjNDNTMuMjcgMC4yMyA0NC44MiA4LjY4IDQ0LjgyIDE5LjExQzQ0LjgyIDIwLjU5IDQ0Ljk5IDIyLjAzIDQ1LjMxIDIzLjQxQzI5LjYyIDIyLjYyIDE1LjcxIDE1LjExIDYuNCAzLjY5QzQuNzggNi40OCAzLjg1IDkuNzIgMy44NSAxMy4xOEMzLjg1IDE5LjcyIDcuMTggMjUuNSAxMi4yNCAyOC44OUM5LjE1IDI4Ljc5IDYuMjQgMjcuOTQgMy42OSAyNi41M0MzLjY5IDI2LjYgMy42OSAyNi42OCAzLjY5IDI2Ljc2QzMuNjkgMzUuOTEgMTAuMiA0My41NCAxOC44MyA0NS4yN0MxNy4yNSA0NS43IDE1LjU4IDQ1LjkzIDEzLjg2IDQ1LjkzQzEyLjY1IDQ1LjkzIDExLjQ2IDQ1LjgyIDEwLjMxIDQ1LjZDMTIuNzEgNTMuMDkgMTkuNjkgNTguNTUgMjcuOTQgNTguN0MyMS40OCA2My43NyAxMy4zNSA2Ni43OCA0LjUgNjYuNzhDMi45OCA2Ni43OCAxLjQ4IDY2LjY5IDAgNjYuNTJDOC4zNSA3MS44NyAxOC4yNyA3NSAyOC45MyA3NUM2My42NSA3NSA4Mi42NCA0Ni4yNCA4Mi42NCAyMS4yOUM4Mi42NCAyMC40OCA4Mi42MiAxOS42NiA4Mi41OCAxOC44NUM4Ni4yNyAxNi4xOSA4OS40NyAxMi44NyA5MiA5LjA4WiIgLz4KCTwvZz4KPC9zdmc+"/></defs><style></style><g id="About Us"><g id="Social Media"><g id="Twitter"><use id="twitter" href="#img1" transform="scale(.152 .16)"/></g></g></g></svg>
+
                 </a>
               </li>
               <li>
                 <a href="#"  class="social__button  --linkedin">
                   <span class="visually-hidden">linkedin</span>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"><defs><image width="90" height="89" id="img1" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA5MCA4OSIgd2lkdGg9IjkwIiBoZWlnaHQ9Ijg5Ij4KCTxkZWZzPgoJCTxjbGlwUGF0aCBjbGlwUGF0aFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgaWQ9ImNwMSI+CgkJCTxwYXRoIGQ9Ik0wIDBMOTAgMEw5MCA4OUwwIDg5WiIgLz4KCQk8L2NsaXBQYXRoPgoJPC9kZWZzPgoJPHN0eWxlPgoJCXRzcGFuIHsgd2hpdGUtc3BhY2U6cHJlIH0KCQkuc2hwMCB7IGZpbGw6ICMwMDAwMDAgfSAKCTwvc3R5bGU+Cgk8ZyBpZD0iUGFnZSAxIiBjbGlwLXBhdGg9InVybCgjY3AxKSI+CgkJPHBhdGggaWQ9IlBhdGggMSIgY2xhc3M9InNocDAiIGQ9Ik0wLjUxIDI3LjFMMTkuNzUgMjcuMUwxOS43NSA4OUwwLjUxIDg5TDAuNTEgMjcuMVpNMjAuMzggOS44OEMyMC4zOCAxNS4yIDE2LjQ1IDE5LjUgMTAgMTkuNUMzLjkyIDE5LjUgMCAxNS4yIDAgOS44OEMwIDQuNDQgNC4wNSAwLjI2IDEwLjI1IDAuMjZDMTYuNDUgMC4yNiAyMC4yNSA0LjQ0IDIwLjM4IDkuODhaTTMxLjI2IDQ2Ljg1QzMxLjI2IDM5LjEyIDMxLjAxIDMyLjY3IDMwLjc2IDI3LjFMNDcuNDYgMjcuMUw0OC4zNSAzNS43MUw0OC43MyAzNS43MUM1MS4yNiAzMS42NSA1Ny40NyAyNS43IDY3Ljg1IDI1LjdDODAuNTEgMjUuNyA5MCAzNC4xOSA5MCA1Mi40MUw5MCA4OUw3MC43NiA4OUw3MC43NiA1NC42OUM3MC43NiA0Ni43MiA2Ny45NyA0MS4yOCA2MS4wMSA0MS4yOEM1NS42OSA0MS4yOCA1Mi41MyA0NC45NSA1MS4xNCA0OC40OUM1MC42MyA0OS43NiA1MC41IDUxLjUzIDUwLjUgNTMuM0w1MC41IDg5TDMxLjI2IDg5TDMxLjI2IDQ2Ljg1WiIgLz4KCTwvZz4KPC9zdmc+"/></defs><style></style><g id="About Us"><g id="Social Media"><g id="LinkedIn"><use id="linkedin" href="#img1" transform="scale(.156 .158)"/></g></g></g></svg>
+
                 </a>
               </li>
             </ul>
