@@ -85,10 +85,6 @@ svg path {
   overflow: hidden;
 }
 
-svg path {
-  fill: inherit;
-}
-
 .container {
   width: 1020px;
   margin: 0 auto;
@@ -528,44 +524,27 @@ svg path {
   height: 32px;
   margin-right: 8px;
 
-  background-color: #666d89;
+  background-color: #f2f2f2;
   border: 1px solid #666d89;
   border-radius: 50%;
 }
 
-.social__button path {
-  fill: #f2f2f2;
-}
-
-.social__button:hover path,
-.social__button:focus path {
-  fill: #767e9e;
-}
-
 .social__button:hover,
 .social__button:focus {
-  background-color: #2d303a;
+  background-color: #666d89;
 }
 
-.social__button--google,
-.social__button--linkedin {
-  background-color: #f2f2f2;
+/* styles for use */
+
+svg path {
+  fill: inherit;
 }
 
-.social__button--google path,
-.social__button--linkedin path {
+use {
   fill: #666d89;
 }
 
-.social__button--google:hover path,
-.social__button--google:focus path,
-
-.social__button--linkedin:hover path,
-.social__button--linkedin:focus path {
+.social__button:hover use,
+.social__button:focus use {
   fill: #2d303a;
-}
-
-.social__button--google:hover,
-.social__button--linkedin:hover {
-  background-color: #767e9e;
 }
