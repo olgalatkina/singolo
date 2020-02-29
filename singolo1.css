@@ -70,10 +70,6 @@ img {
   height: auto;
 }
 
-svg path {
-  fill: inherit;
-}
-
 .visually-hidden {
   position: absolute;
   width: 1px;

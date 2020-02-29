@@ -70,10 +70,6 @@ img {
   height: auto;
 }
 
-svg path {
-  fill: inherit;
-}
-
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -223,6 +219,8 @@ svg path {
   margin-bottom: 10px;
   font-size: 18px;
   line-height: 1em;
+  max-height: 1em;
+  overflow: hidden;
   letter-spacing: -0.24px;
   font-family: "Lato";
   font-weight: 900;
