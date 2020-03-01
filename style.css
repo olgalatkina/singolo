@@ -553,3 +553,158 @@ use {
 .social__button:focus use {
   fill: #2d303a;
 }
+
+/* Get a Quote */
+
+.quote {
+  min-height: 648px;
+  padding-top: 62px;
+  background-color: #f06c64;
+  border-bottom: 6px solid #ea676b;
+}
+
+.quote__title {
+  margin-bottom: 30px;
+  font-size: 30px;
+  line-height: 1em;
+  font-family: "Lato";
+  font-weight: 900;
+  color: #f0d8d9;
+}
+
+.quote__intro {
+  margin-bottom: 48px;
+  font-size: 18px;
+  line-height: 1.66em;
+  font-family: "Lato";
+  font-weight: 300;
+  color: #f0d8d9;
+}
+
+.quote__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Form */
+
+.form {
+  width: 620px;
+}
+
+.field-text {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 5px;
+  background-color: #d6564f;
+  border: none;
+
+  /* NB: font for typed text is not in the layout */
+  font-size: 14px;
+  line-height: 1.2em;
+  font-family: "Lato";
+  font-weight: 400;
+  color: #2d303a;
+}
+
+.field-text::placeholder {
+  font-size: 12px;
+  line-height: 1.83em;
+  font-family: "Lato";
+  font-weight: 400;
+  color: #f48c8f;
+}
+
+.form__name,
+.form__email,
+.form__subject {
+  margin-bottom: 16px;
+}
+
+.form__textarea {
+  min-height: 200px;
+  resize: none;
+}
+
+/* NB: button submit is not in the layout */
+.button {
+  display: block;
+  width: 100%;
+  padding: 6px 12px;
+  border: 1px solid #d6564f;
+  border-radius: 5px;
+  background-color: #f06c64;
+
+  font-size: 12px;
+  line-height: 1.83em;
+  font-family: "Lato";
+  font-weight: 400;
+  color: #f0d8d9;
+
+  cursor: pointer;
+}
+
+.button:hover,
+.button:focus {
+  background-color: #d6564f;
+}
+
+/* Contacts */
+
+.contacts {
+  width: 300px;
+}
+
+.contacts__title {
+  margin-bottom: 18px;
+  font-size: 18px;
+  line-height: 1em;
+  font-family: "Lato";
+  font-weight: 900;
+  color: #f0d8d9;
+}
+
+.contacts__intro{
+  margin-bottom: 32px;
+}
+
+.contacts__intro,
+.contacts__info {
+  font-size: 12px;
+  line-height: 1.83em;
+  font-family: "Lato";
+  font-weight: 400;
+  color: #f0d8d9;
+}
+
+.contacts__info {
+  padding-left: 24px;
+}
+
+/* Footer */
+
+.footer {
+  padding-top: 22px;
+  min-height: 76px;
+  background-color: #2d303a;
+}
+
+.footer__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer__copyright {
+  font-size: 12px;
+  line-height: 1.83em;
+  font-family: "Lato";
+  font-weight: 400;
+  color: #666d89;
+}
+
+/* Footer Social icons */
+
+.social__button--footer {
+  background-color: transparent;
+}

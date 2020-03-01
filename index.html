@@ -330,20 +330,20 @@
           <!-- Form -->
           <form class="form" action="#" method="get">
             <p>
-              <label class="visually-hidden" for="form-name">Your name</label>
-              <input class="form__name" type="text" name="name" id="form-name" placeholder="Name (Required)" required>
+              <label class="visually-hidden" for="name-field">Your name</label>
+              <input class="field-text  form__name" type="text" name="name" id="name-field" placeholder="Name (Required)" required>
             </p>
             <p>
-              <label class="visually-hidden" for="form-email">Your mail</label>
-              <input class="form__email" type="text" name="email" id="form-email" placeholder="Email (Required)" required>
+              <label class="visually-hidden" for="email-field">Your mail</label>
+              <input class="field-text  form__email" type="email" name="email" id="email-field" placeholder="Email (Required)" required>
             </p>
             <p>
-              <label class="visually-hidden" for="form-subject">Subject</label>
-              <input class="form__subject" type="text" name="subject" id="form-subject" placeholder="Subject">
+              <label class="visually-hidden" for="subject-field">Subject</label>
+              <input class="field-text  form__subject" type="text" name="subject" id="subject-field" placeholder="Subject">
             </p>
             <p>
-              <label class="visually-hidden" for="form-textarea">Describe your project in detail...</label>
-              <textarea class="form__textarea" name="feedback" id="form-textarea" cols="30" rows="10" placeholder="Describe your project in detail..."></textarea>
+              <label class="visually-hidden" for="textarea">Describe your project in detail...</label>
+              <textarea class="field-text  form__textarea" name="feedback" id="textarea" cols="30" rows="10" placeholder="Describe your project in detail..."></textarea>
             </p>
             <button class="button" type="submit">Submit</button>
           </form>
@@ -360,6 +360,7 @@
       </div>
     </section>
 
+    <!-- Footer -->
     <footer class="footer">
       <div class="wrapper  footer__wrapper">
         <p class="footer__copyright">&copy;&nbsp;Copyright 2013</p>
@@ -367,7 +368,7 @@
         <!-- Social icons -->
         <ul class="social">
           <li>
-            <a href="#"  class="social__button">
+            <a href="#" class="social__button  social__button--footer">
               <span class="visually-hidden">facebook</span>
               <svg width="32" height="32">
                 <use xlink:href="#facebook"></use>
@@ -375,7 +376,7 @@
             </a>
           </li>
           <li>
-            <a href="#" class="social__button">
+            <a href="#" class="social__button  social__button--footer">
               <span class="visually-hidden">google</span>
               <svg width="32" height="32">
                 <use xlink:href="#google"></use>
@@ -383,7 +384,7 @@
             </a>
           </li>
           <li>
-            <a href="#" class="social__button">
+            <a href="#" class="social__button  social__button--footer">
               <span class="visually-hidden">twitter</span>
               <svg width="32" height="32">
                 <use xlink:href="#twitter"></use>
@@ -391,7 +392,7 @@
             </a>
           </li>
           <li>
-            <a href="#"  class="social__button">
+            <a href="#" class="social__button  social__button--footer">
               <span class="visually-hidden">linkedin</span>
               <svg width="32" height="32">
                 <use xlink:href="#linkedin"></use>
