@@ -355,12 +355,14 @@ img {
 .services__f-description {
   max-height: 63px;
   overflow: hidden;
-  text-overflow: ellipsis;
-
   font-size: 12px;
   line-height: 1.8em;
   font-family: "Lato";
   font-weight: 400;
+}
+
+.services__f-description:hover {
+  max-height: 100%;
 }
 
 /* Portfolio */
@@ -491,12 +493,17 @@ img {
   margin-bottom: 10px;
   font-size: 18px;
   line-height: 1em;
-  max-height: 1em;
-  overflow: hidden;
   letter-spacing: -0.24px;
   font-family: "Lato";
   font-weight: 900;
   color: #666d89;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.about__name:hover {
+  white-space: normal;
 }
 
 .about__text {
