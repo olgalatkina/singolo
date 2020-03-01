@@ -163,6 +163,7 @@ img {
 .navigation__item a:hover,
 .navigation__item a:focus {
   color: #f06c64;
+  transition: all 0.3s linear;
 }
 
 /* Main */
@@ -204,6 +205,7 @@ img {
 .arrow:hover,
 .arrow:focus {
   opacity: 0.7;
+  transition: all 0.3s linear;
 }
 
 .slider__image {
@@ -425,6 +427,7 @@ img {
 .portfolio__button:hover {
   color: #dedede;
   background-color: #666d89;
+  transition: all 0.3s linear;
 }
 
 .portfolio__button--active {
@@ -537,6 +540,7 @@ img {
 .social__button:hover,
 .social__button:focus {
   background-color: #666d89;
+  transition: all 0.3s linear;
 }
 
 /* styles for use */
@@ -639,6 +643,7 @@ use {
   line-height: 1.83em;
   font-family: "Lato";
   font-weight: 400;
+  text-transform: uppercase;
   color: #f0d8d9;
 
   cursor: pointer;
@@ -647,6 +652,7 @@ use {
 .button:hover,
 .button:focus {
   background-color: #d6564f;
+  transition: all 0.3s linear;
 }
 
 /* Contacts */
@@ -678,7 +684,40 @@ use {
 }
 
 .contacts__info {
+  position: relative;
   padding-left: 24px;
+}
+
+.contacts__info::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 0;
+
+  width: 15px;
+  height: 15px;
+
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.contacts__info--address::before {
+  /* top: 0;
+  left: 0; */
+  background-image: url(assets/images/ico-location-pin.svg);
+}
+
+.contacts__info--phone::before {
+  /* top: 0;
+  left: 0; */
+  background-image: url(assets/images/ico-phone-contacts.svg);
+}
+
+.contacts__info--mail::before {
+  /* top: 0;
+  left: 0; */
+  background-image: url(assets/images/ico-mail.svg);
 }
 
 /* Footer */
