@@ -209,6 +209,7 @@ img {
 }
 
 .slider__image {
+  margin-left: -1px;
   display: flex;
   align-items: center;
 }
@@ -310,8 +311,16 @@ img {
   background-position: center;
 }
 
+.services__features:nth-child(2)::before,
+.services__features:nth-child(3)::before,
+.services__features:nth-child(5)::before,
+.services__features:nth-child(6)::before {
+  left: 0;
+}
+
 .services__features--pen::before {
   background-image: url(assets/images/ico-pen.svg);
+  background-position: 53% 53%;
 }
 
 .services__features--bulb::before {
@@ -328,6 +337,7 @@ img {
 
 .services__features--bubble::before {
   background-image: url(assets/images/ico-bubble.svg);
+  background-position: 53% 53%;
 }
 
 .services__features--star::before {
@@ -488,6 +498,10 @@ img {
   flex-shrink: 0;
 }
 
+.about__employee--center {
+  margin-left: -2px;
+}
+
 .about__photo {
   margin-bottom: 11px;
 }
@@ -524,6 +538,10 @@ img {
 .social {
   display: flex;
   padding-left: 1px;
+}
+
+.about__social--right {
+  margin-left: -1px;
 }
 
 .social__button {
@@ -742,7 +760,7 @@ input:valid:not(:placeholder-shown) {
 }
 
 .contacts__info--mail::before {
-  top: 5px;
+  top: 4px;
   width: 18px;
   height: 18px;
   background-image: url(assets/images/ico-mail.svg);
