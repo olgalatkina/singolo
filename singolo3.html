@@ -32,11 +32,11 @@
           <form class="form" action="#" method="get">
             <p class="form__fields">
               <label class="visually-hidden" for="name-field">Your name</label>
-              <input class="field-text  form__name" type="text" name="name" id="name-field" placeholder="Name (Required)" required>
+              <input class="field-text  form__name" type="text" name="name" id="name-field" placeholder="Name (Required)" pattern="[a-zA-Z0-9]+" minlength="4" maxlength="50" required>
             </p>
             <p class="form__fields">
               <label class="visually-hidden" for="email-field">Your mail</label>
-              <input class="field-text  form__email" type="email" name="email" id="email-field" placeholder="Email (Required)" required>
+              <input class="field-text  form__email" type="email" name="email" id="email-field" placeholder="Email (Required)" pattern="^\S+@\S+\.\S+$" required>
             </p>
             <p class="form__fields">
               <label class="visually-hidden" for="subject-field">Subject</label>

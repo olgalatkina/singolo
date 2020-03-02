@@ -634,6 +634,18 @@ use {
   resize: none;
 }
 
+.field-text:not(:placeholder-shown) {
+  background-color:#f0d8d9;
+}
+
+input:invalid:not(:placeholder-shown) {
+  border: 1px solid #2d303a;
+}
+
+input:valid:not(:placeholder-shown) {
+  background-color:#f0d8d9;
+}
+
 /* NB: button submit is not in the layout */
 .button {
   display: block;
