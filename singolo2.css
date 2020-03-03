@@ -1,0 +1,276 @@
+@font-face {
+  font-family: 'Lato';
+  src: url('assets/fonts/Lato-Light.woff2') format('woff2'),
+      url('assets/fonts/Lato-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url('assets/fonts/Lato-Regular.woff2') format('woff2'),
+      url('assets/fonts/Lato-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url('assets/fonts/Lato-Bold.woff2') format('woff2'),
+      url('assets/fonts/Lato-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url('assets/fonts/Lato-Black.woff2') format('woff2'),
+      url('assets/fonts/Lato-Black.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Lato", "Helvetica", sans-serif;
+  font-size: 12px;
+  line-height: 1.8em;
+  font-weight: 400;
+  color: #767e9e;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.container {
+  width: 1020px;
+  margin: 0 auto;
+}
+
+.wrapper {
+  padding: 0 40px;
+}
+
+/* Main */
+/* Portfolio */
+
+.portfolio {
+  min-height: 869px;
+  padding-top: 62px;
+  background-color: #2d303a;
+  border-bottom: 6px solid #323746;
+}
+
+.portfolio__title {
+  margin-bottom: 21px;
+
+  font-size: 30px;
+  line-height: 1em;
+  letter-spacing: -0.2px;
+  font-family: "Lato";
+  font-weight: 900;
+  color: #666d89;
+}
+
+.portfolio__intro {
+  margin-bottom: 11px;
+
+  font-size: 18px;
+  line-height: 1.67em;
+  font-family: "Lato";
+  font-weight: 300;
+  color: #767e9e;
+}
+
+.portfolio__classes {
+  display: flex;
+  margin-bottom: 19px;
+  margin-left: 1px;
+}
+
+.portfolio__class {
+  margin-right: 10px;
+}
+
+.portfolio__button {
+  display: block;
+  padding: 0 6px;
+  border: 1px solid #666d89;
+  border-radius: 5px;
+  background-color: transparent;
+
+  font-size: 12px;
+  line-height: 1.7em;
+  letter-spacing: -0.04px;
+  font-family: "Lato";
+  font-weight: 400;
+  color: #767e9e;
+
+  cursor: pointer;
+}
+
+.portfolio__button:hover {
+  color: #dedede;
+  background-color: #666d89;
+}
+
+.portfolio__button--active {
+  color: #dedede;
+  border-color:#c5c5c5;
+}
+
+.portfolio__gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  max-height: 600px;
+  overflow: hidden;
+}
+
+.portfolio__item {
+  flex-shrink: 0;
+
+  margin-bottom: 14px;
+}
+
+/* About Us */
+
+.about {
+  min-height: 734px;
+  padding-top: 62px;
+  background-color: #f2f2f2;
+  border-bottom: 6px solid #ffffff;
+}
+
+.about__title {
+  margin-bottom: 22px;
+  font-size: 30px;
+  line-height: 1em;
+  letter-spacing: -0.19px;
+  font-family: "Lato";
+  font-weight: 900;
+  color: #666d89;
+}
+
+.about__intro {
+  margin-bottom: 46px;
+  font-size: 18px;
+  line-height: 1.66em;
+  font-family: "Lato";
+  font-weight: 300;
+  color: #767e9e;
+}
+
+.about__staff {
+  display: flex;
+  justify-content: space-between;
+}
+
+.about__employee {
+  width: 300px;
+  flex-shrink: 0;
+}
+
+.about__photo {
+  margin-bottom: 11px;
+}
+
+.about__name {
+  margin-bottom: 10px;
+  font-size: 18px;
+  line-height: 1em;
+  max-height: 1em;
+  overflow: hidden;
+  letter-spacing: -0.24px;
+  font-family: "Lato";
+  font-weight: 900;
+  color: #666d89;
+}
+
+.about__text {
+  margin-bottom: 24px;
+  font-size: 12px;
+  line-height: 1.83em;
+  letter-spacing: -0.09px;
+  font-family: "Lato";
+  font-weight: 400;
+  color: #767e9e;
+}
+
+/* Social */
+
+.social {
+  display: flex;
+  padding-left: 1px;
+}
+
+.social__button {
+  display: flex;
+  width: 32px;
+  height: 32px;
+  margin-right: 8px;
+
+  background-color: #f2f2f2;
+  border: 1px solid #666d89;
+  border-radius: 50%;
+}
+
+.social__button:hover,
+.social__button:focus {
+  background-color: #666d89;
+}
+
+/* styles for use */
+
+svg path {
+  fill: inherit;
+}
+
+use {
+  fill: #666d89;
+}
+
+.social__button:hover use,
+.social__button:focus use {
+  fill: #2d303a;
+}
