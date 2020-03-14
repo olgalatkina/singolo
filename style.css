@@ -190,10 +190,11 @@ img {
   margin-top: -6px;
   border: none;
 
+  background-image: url(assets/images/arrow.svg);
   background-color: transparent;
-  background-image: url(assets/images/ico-chev.svg);
   background-repeat: no-repeat;
   background-position: center;
+  opacity: 0.2;
 
   cursor: pointer;
 }
@@ -204,7 +205,7 @@ img {
 
 .arrow:hover,
 .arrow:focus {
-  opacity: 0.6;
+  opacity: 0.3;
   transition: all 0.3s linear;
 }
 
@@ -218,17 +219,19 @@ img {
   position: relative;
 }
 
+.phone__inner {
+  position: absolute;
+  background-repeat: no-repeat;
+}
+
+/* Slider 1 */
+
 .phone--vertical {
   margin-right: 72px;
 }
 
 .phone--horizontal {
   margin-top: -2px;
-}
-
-.phone__inner {
-  position: absolute;
-  background-repeat: no-repeat;
 }
 
 .phone__inner--vertical {
@@ -253,6 +256,36 @@ img {
   background-image: url(assets/images/LayerHorizontal.png);
   background-position: -124px -118px;
   background-color: #81cfd9;
+}
+
+/* Slider 2 */
+
+.slider__2 {
+  display: none;
+  background-color: #648BF0;
+  border-bottom: 6px solid #708cd8;
+}
+
+.slider__image--2 {
+  width: 471px;
+
+  background-image: url(assets/images/slider-2-small.png);
+  background-repeat: repeat-x;
+  background-position: 0 96px;
+}
+
+.phone--big {
+  margin: 0 auto;
+}
+
+.phone__inner--black {
+  display: none;
+  top: 69px;
+  left: 15px;
+
+  width: 200px;
+  height: 354px;
+  background-color: black;
 }
 
 /* Services */
