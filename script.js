@@ -1,12 +1,13 @@
 const slider = document.querySelector('.slider');
-const slider1 = document.querySelector('.slider__image--1');
-const slider2 = document.querySelector('.slider__image--2');
+const slider1 = slider.querySelector('.slider__image--1');
+const slider2 = slider.querySelector('.slider__image--2');
 
-const arrowLeft = document.querySelector('.arrow--left');
-const arrowRight = document.querySelector('.arrow--right');
+const arrowLeft = slider.querySelector('.arrow--left');
+const arrowRight = slider.querySelector('.arrow--right');
 
-const phoneInnerVertical = document.querySelector('.phone__inner--vertical');
-const phoneInnerHorizontal = document.querySelector('.phone__inner--horizontal');
+const phoneInnerVertical = slider.querySelector('.phone__inner--vertical');
+const phoneInnerHorizontal = slider.querySelector('.phone__inner--horizontal');
+const blackScreen = slider.querySelector('.phone__inner--black');
 
 slider.addEventListener('click', function (evt) {
   if (evt.target === arrowLeft) {
@@ -31,5 +32,9 @@ slider.addEventListener('click', function (evt) {
 
   if (event.target.closest('.phone--horizontal')) {
     phoneInnerHorizontal.classList.toggle('visually-hidden');
+  }
+
+  if (event.target.closest('.phone--big')) {
+    blackScreen.classList.toggle('visually-hidden');
   }
 });

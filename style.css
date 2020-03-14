@@ -81,18 +81,24 @@ img {
   overflow: hidden;
 }
 
-.container {
+/* .container {
   width: 1020px;
   margin: 0 auto;
-}
+} */
 
 .wrapper {
+  width: 1020px;
+  margin: 0 auto;
   padding: 0 40px;
 }
 
 /* Header */
 
 .header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+
   padding-top: 14px;
   height: 95px;
   background-color: #2d303a;
@@ -291,7 +297,6 @@ img {
 }
 
 .phone__inner--black {
-  display: none;
   top: 69px;
   left: 15px;
 
@@ -303,6 +308,7 @@ img {
 /* Services */
 
 .services {
+  scroll-margin-top: 95px;
   min-height: 500px;
   padding-top: 62px;
   background-color: #f2f2f2;
@@ -427,6 +433,7 @@ img {
 /* Portfolio */
 
 .portfolio {
+  scroll-margin-top: 95px;
   min-height: 869px;
   padding-top: 62px;
   background-color: #2d303a;
@@ -510,6 +517,7 @@ img {
 /* About Us */
 
 .about {
+  scroll-margin-top: 95px;
   min-height: 734px;
   padding-top: 62px;
   background-color: #f2f2f2;
@@ -628,6 +636,7 @@ use {
 /* Get a Quote */
 
 .quote {
+  scroll-margin-top: 95px;
   min-height: 654px;
   padding-top: 62px;
   background-color: #f06c64;
