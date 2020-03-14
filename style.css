@@ -172,14 +172,33 @@ img {
 .slider {
   padding-top: 52px;
   height: 600px;
+}
+
+.slider--1 {
   background-color: #f06c64;
   border-bottom: 6px solid #ea676b;
 }
 
+.slider--2 {
+  background-color: #648BF0;
+  border-bottom: 6px solid #708cd8;
+}
+
 .slider__wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider__buttons {
+  position: absolute;
+  top: 233px;
+  left: 40px;
+  width: 940px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  /* z-index: 10; */
 }
 
 .arrow {
@@ -225,7 +244,6 @@ img {
 }
 
 /* Slider 1 */
-
 .phone--vertical {
   margin-right: 72px;
 }
@@ -259,12 +277,6 @@ img {
 }
 
 /* Slider 2 */
-
-.slider__2 {
-  display: none;
-  background-color: #648BF0;
-  border-bottom: 6px solid #708cd8;
-}
 
 .slider__image--2 {
   width: 471px;
