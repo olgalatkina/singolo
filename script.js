@@ -1,8 +1,8 @@
 window.onload = function () {
   addNavClickHandler();
   addSlider();
-
   addTagClickHandler();
+  addImageClickHandler();
 };
 
 // Navigation
@@ -36,27 +36,21 @@ const addSlider = () => {
     if (evt.target === arrowLeft) {
       slider.classList.toggle('slider--1');
       slider.classList.toggle('slider--2');
-
       slider1.classList.toggle('visually-hidden');
       slider2.classList.toggle('visually-hidden');
     }
-
     if (evt.target === arrowRight) {
       slider.classList.toggle('slider--1');
       slider.classList.toggle('slider--2');
-
       slider1.classList.toggle('visually-hidden');
       slider2.classList.toggle('visually-hidden');
     }
-
     if (event.target.closest('.phone--vertical')) {
       phoneInnerVertical.classList.toggle('visually-hidden');
     }
-
     if (event.target.closest('.phone--horizontal')) {
       phoneInnerHorizontal.classList.toggle('visually-hidden');
     }
-
     if (event.target.closest('.phone--big')) {
       blackScreen.classList.toggle('visually-hidden');
     }
@@ -69,17 +63,8 @@ const addTagClickHandler = () => {
   portfolio.querySelector('.portfolio__classes').addEventListener('click', (evt) => {
     if (evt.target.classList.contains('portfolio__button')) {
       let clickedTag = evt.target;
-      console.log(clickedTag);
       toggleClickedTag(clickedTag);
-
-      const randomWorkList = getRandomWorkList();
-    }
-
-    if (evt.target.classList.contains('portfolio__image')) {
-      let clickedImage = evt.target;
-      console.log(clickedImage);
-
-      colorTheBorder(clickedImage);
+      renderImagesToDom();
     }
   })
 }
@@ -108,10 +93,28 @@ const getRandomWorkList = () => {
   return shuffleArray(workList);
 }
 
+const renderImagesToDom = () => {
+  const randomWorkList = getRandomWorkList();
+  const gallery = portfolio.querySelector('.portfolio__gallery');
+  gallery.innerText = '';
+  randomWorkList.forEach(elem => {
+    let li = document.createElement('li');
+    li.append(elem);
+    gallery.append(li);
+  })
+}
+
+const addImageClickHandler = () => {
+  portfolio.querySelector('.portfolio__gallery').addEventListener('click', (evt) => {
+    if (evt.target.classList.contains('portfolio__image')) {
+      let clickedImage = evt.target;
+      colorTheBorder(clickedImage);
+    }
+  });
+}
+
 const colorTheBorder = (clickedImage) => {
   let images = portfolio.querySelectorAll('.portfolio__image');
-  console.log(images);
-
   images.forEach(image => {
     image.classList.remove('portfolio__image--bordered');
   });

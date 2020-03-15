@@ -510,7 +510,8 @@ img {
 
 .portfolio__item {
   flex-shrink: 0;
-  margin-bottom: 14px;
+  height: 187px;
+  margin-bottom: 20px;
   cursor: pointer;
 }
 
