@@ -1,40 +1,119 @@
-const slider = document.querySelector('.slider');
-const slider1 = slider.querySelector('.slider__image--1');
-const slider2 = slider.querySelector('.slider__image--2');
+window.onload = function () {
+  addNavClickHandler();
+  addSlider();
 
-const arrowLeft = slider.querySelector('.arrow--left');
-const arrowRight = slider.querySelector('.arrow--right');
+  addTagClickHandler();
+};
 
-const phoneInnerVertical = slider.querySelector('.phone__inner--vertical');
-const phoneInnerHorizontal = slider.querySelector('.phone__inner--horizontal');
-const blackScreen = slider.querySelector('.phone__inner--black');
+// Navigation
+const addNavClickHandler = () => {
+  const navigation = document.querySelector('.navigation__list');
+  const navItems = navigation.querySelectorAll('.navigation__item');
 
-slider.addEventListener('click', function (evt) {
-  if (evt.target === arrowLeft) {
-    slider.classList.toggle('slider--1');
-    slider.classList.toggle('slider--2');
+  navigation.addEventListener('click', function (evt) {
+    let currentItem = evt.target;
+    navItems.forEach(item => {
+      item.classList.remove('navigation__item--active');
+    });
+    currentItem.closest('.navigation__item').classList.add('navigation__item--active');
+  });
+}
 
-    slider1.classList.toggle('visually-hidden');
-    slider2.classList.toggle('visually-hidden');
+// Slider
+const addSlider = () => {
+  const slider = document.querySelector('.slider');
+  const slider1 = slider.querySelector('.slider__image--1');
+  const slider2 = slider.querySelector('.slider__image--2');
+
+  const arrowLeft = slider.querySelector('.arrow--left');
+  const arrowRight = slider.querySelector('.arrow--right');
+
+  const phoneInnerVertical = slider.querySelector('.phone__inner--vertical');
+  const phoneInnerHorizontal = slider.querySelector('.phone__inner--horizontal');
+  const blackScreen = slider.querySelector('.phone__inner--black');
+
+  slider.addEventListener('click', function (evt) {
+    if (evt.target === arrowLeft) {
+      slider.classList.toggle('slider--1');
+      slider.classList.toggle('slider--2');
+
+      slider1.classList.toggle('visually-hidden');
+      slider2.classList.toggle('visually-hidden');
+    }
+
+    if (evt.target === arrowRight) {
+      slider.classList.toggle('slider--1');
+      slider.classList.toggle('slider--2');
+
+      slider1.classList.toggle('visually-hidden');
+      slider2.classList.toggle('visually-hidden');
+    }
+
+    if (event.target.closest('.phone--vertical')) {
+      phoneInnerVertical.classList.toggle('visually-hidden');
+    }
+
+    if (event.target.closest('.phone--horizontal')) {
+      phoneInnerHorizontal.classList.toggle('visually-hidden');
+    }
+
+    if (event.target.closest('.phone--big')) {
+      blackScreen.classList.toggle('visually-hidden');
+    }
+  });
+}
+
+// Portfolio
+const addTagClickHandler = () => {
+  const portfolio = document.querySelector('.portfolio');
+  portfolio.querySelector('.portfolio__classes').addEventListener('click', (evt) => {
+    if (evt.target.classList.contains('portfolio__button')) {
+      let clickedTag = evt.target;
+      console.log(clickedTag);
+      toggleClickedTag(clickedTag);
+
+      const randomWorkList = getRandomWorkList();
+    }
+
+    if (evt.target.classList.contains('portfolio__image')) {
+      let clickedImage = evt.target;
+      console.log(clickedImage);
+
+      colorTheBorder(clickedImage);
+    }
+  })
+}
+
+const toggleClickedTag = (clickedTag) => {
+  let tags = portfolio.querySelectorAll('.portfolio__button');
+  tags.forEach(tag => {
+    tag.classList.remove('portfolio__button--active');
+  });
+  clickedTag.classList.add('portfolio__button--active');
+}
+
+// Fisher–Yates shuffle
+const shuffleArray = function (array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    let j = Math.floor(Math.random() * (i + 1));
+    let temp = array[i];
+    array[i] = array[j];
+    array[j] = temp;
   }
+  return array;
+}
 
-  if (evt.target === arrowRight) {
-    slider.classList.toggle('slider--1');
-    slider.classList.toggle('slider--2');
+const getRandomWorkList = () => {
+  const workList = Array.from(portfolio.querySelectorAll('.portfolio__item'));
+  return shuffleArray(workList);
+}
 
-    slider1.classList.toggle('visually-hidden');
-    slider2.classList.toggle('visually-hidden');
-  }
+const colorTheBorder = (clickedImage) => {
+  let images = portfolio.querySelectorAll('.portfolio__image');
+  console.log(images);
 
-  if (event.target.closest('.phone--vertical')) {
-    phoneInnerVertical.classList.toggle('visually-hidden');
-  }
-
-  if (event.target.closest('.phone--horizontal')) {
-    phoneInnerHorizontal.classList.toggle('visually-hidden');
-  }
-
-  if (event.target.closest('.phone--big')) {
-    blackScreen.classList.toggle('visually-hidden');
-  }
-});
+  images.forEach(image => {
+    image.classList.remove('portfolio__image--bordered');
+  });
+  clickedImage.classList.add('portfolio__image--bordered');
+}
