@@ -3,6 +3,8 @@ window.onload = function () {
   addSlider();
   addTagClickHandler();
   addImageClickHandler();
+  addFormClickHandler();
+  addModalClickHandler();
 };
 
 // Navigation
@@ -119,4 +121,67 @@ const colorTheBorder = (clickedImage) => {
     image.classList.remove('portfolio__image--bordered');
   });
   clickedImage.classList.add('portfolio__image--bordered');
+}
+
+// Form
+
+const addFormClickHandler = () => {
+  const form = document.querySelector('.form');
+  const modal = document.querySelector('.modal');
+  const overlay = document.querySelector('.modal-overlay');
+
+  form.addEventListener('click', (evt) => {
+    if (form.checkValidity()) {
+      evt.preventDefault();
+      if (evt.target.classList.contains('button')) {
+        replaceTextInModal();
+        form.reset();
+        modal.classList.add('modal-show');
+        overlay.classList.add('modal-overlay-show');
+      }
+    }
+  });
+}
+
+const addModalClickHandler = () => {
+  const modal = document.querySelector('.modal');
+  const overlay = document.querySelector('.modal-overlay');
+  modal.addEventListener("click", function (evt) {
+    if (evt.target.classList.contains('modal__button')) {
+      evt.preventDefault();
+      modal.classList.remove('modal-show');
+      overlay.classList.remove('modal-overlay-show');
+    }
+  });
+
+  window.addEventListener("keydown", function (evt) {
+    if (evt.keyCode === 27) {
+      evt.preventDefault();
+      if (modal.classList.contains("modal-show")) {
+        modal.classList.remove("modal-show");
+        modal.classList.remove("modal-error");
+      }
+      if (overlay.classList.contains("modal-overlay-show")) {
+        overlay.classList.remove("modal-overlay-show");
+      }
+    }
+  });
+}
+
+const replaceTextInModal = () => {
+  let modal = document.querySelector('.modal');
+  let subjectContent = document.querySelector('#subject-field').value;
+  let textareaContent = document.querySelector('#textarea').value;
+
+  if (subjectContent.length > 0) {
+    modal.querySelector('.modal__subject-text').innerText = subjectContent;
+  } else {
+    modal.querySelector('.modal__subject').innerText = 'Without subject';
+  }
+
+  if (textareaContent.length > 0) {
+    modal.querySelector('.modal__description-text').innerText = textareaContent;
+  } else {
+    modal.querySelector('.modal__description').innerText = 'Without description';
+  }
 }
