@@ -47,13 +47,13 @@ const addSlider = () => {
       slider1.classList.toggle('visually-hidden');
       slider2.classList.toggle('visually-hidden');
     }
-    if (event.target.closest('.phone--vertical')) {
+    if (event.target.classList.contains('phone__button--slide1-v')) {
       phoneInnerVertical.classList.toggle('visually-hidden');
     }
-    if (event.target.closest('.phone--horizontal')) {
+    if (event.target.classList.contains('phone__button--slide1-h')) {
       phoneInnerHorizontal.classList.toggle('visually-hidden');
     }
-    if (event.target.closest('.phone--big')) {
+    if (event.target.classList.contains('phone__button--slide2-v')) {
       blackScreen.classList.toggle('visually-hidden');
     }
   });
@@ -124,7 +124,6 @@ const colorTheBorder = (clickedImage) => {
 }
 
 // Form
-
 const addFormClickHandler = () => {
   const form = document.querySelector('.form');
   const modal = document.querySelector('.modal');

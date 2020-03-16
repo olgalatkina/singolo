@@ -244,6 +244,38 @@ img {
   position: relative;
 }
 
+.phone__button {
+  position: absolute;
+  width: 41px;
+  height: 41px;
+  background-color: transparent;
+  border: 1px solid #fafafa;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.phone__button:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-color: rgba(0, 0, 0, 0.01);
+}
+
+.phone__button--slide1-v {
+  top: 409px;
+  left: 89px;
+}
+
+.phone__button--slide1-h {
+  top: 88px;
+  left: 10px;
+}
+
+.phone__button--slide2-v {
+  top: 434px;
+  left: 93px;
+  width: 43px;
+  height: 43px;
+}
+
 .phone__inner {
   position: absolute;
   background-repeat: no-repeat;
