@@ -39,16 +39,20 @@
   padding: 0;
 }
 
+html {
+  box-sizing: border-box;
+}
+
+html, body {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Lato", "Helvetica", sans-serif;
   font-size: 12px;
   line-height: 1.8em;
   font-weight: 400;
   color: #767e9e;
-}
-
-html {
-  box-sizing: border-box;
 }
 
 *,
@@ -81,24 +85,22 @@ img {
   overflow: hidden;
 }
 
-/* .container {
-  width: 1020px;
-  margin: 0 auto;
-} */
-
 .wrapper {
   width: 1020px;
   margin: 0 auto;
   padding: 0 40px;
 }
 
+.container {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+}
+
 /* Header */
 
 .header {
-  position: sticky;
-  top: 0;
-  z-index: 10;
-
   padding-top: 14px;
   height: 95px;
   background-color: #2d303a;
@@ -176,6 +178,8 @@ img {
 /* Slider */
 
 .slider {
+  margin-top: 95px;
+  scroll-margin-top: 95px;
   padding-top: 52px;
   height: 600px;
 }

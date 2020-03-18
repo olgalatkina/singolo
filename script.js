@@ -1,5 +1,6 @@
 window.onload = function () {
-  addNavClickHandler();
+  // addNavClickHandler();
+  addScrollHandler();
   addSlider();
   addTagClickHandler();
   addImageClickHandler();
@@ -19,6 +20,30 @@ const addNavClickHandler = () => {
     });
     currentItem.closest('.navigation__item').classList.add('navigation__item--active');
   });
+}
+
+const addScrollHandler = () => {
+  document.addEventListener('scroll', onScroll);
+}
+
+const onScroll = (evt) => {
+  const currentPosition = window.scrollY;
+  const sections = document.querySelectorAll('.body>*[id]');
+  const navItems = document.querySelectorAll('.navigation__item');
+  const headerHeight = 95;
+
+  sections.forEach((elem) => {
+    if (elem.offsetTop - headerHeight <= currentPosition &&
+       (elem.offsetTop + elem.offsetHeight) > currentPosition) {
+      navItems.forEach(item => {
+        item.classList.remove('navigation__item--active');
+
+        if (elem.getAttribute('id') === item.textContent) {
+          item.classList.add('navigation__item--active');
+        }
+      });
+    }
+  })
 }
 
 // Slider
