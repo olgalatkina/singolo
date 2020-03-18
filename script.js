@@ -6,6 +6,7 @@ window.onload = function () {
   addImageClickHandler();
   addFormClickHandler();
   addModalClickHandler();
+  window.location.href = '#home';
 };
 
 // Navigation
