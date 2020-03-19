@@ -524,10 +524,12 @@ img {
   cursor: pointer;
 }
 
-.portfolio__button:hover {
+.portfolio__button:hover,
+.portfolio__button:focus {
   color: #dedede;
   background-color: #666d89;
   transition: all 0.3s linear;
+  outline: none;
 }
 
 .portfolio__button--active {
@@ -551,12 +553,18 @@ img {
   cursor: pointer;
 }
 
+/* .portfolio__item:hover {
+  transform: scale(1.1);
+  transition: all 0.3s linear;
+} */
+
 .portfolio__item:nth-child(1n + 13) {
   display: none;
 }
 
 .portfolio__image--bordered {
-  border: 5px solid #F06C64;
+  outline: 5px solid #F06C64;
+  transition: all 0.3s linear;
 }
 
 /* About Us */
@@ -910,9 +918,9 @@ use {
   display: none;
   position: fixed;
   z-index: 100;
-  top: 360px;
+  top: 160px;
   left: calc(50% - 160px);
-  width: 320px;
+  width: 365px;
   min-height: 200px;
   padding: 20px;
   background-color: #f2f2f2;

@@ -1,5 +1,4 @@
 window.onload = function () {
-  // addNavClickHandler();
   addScrollHandler();
   addSlider();
   addTagClickHandler();
@@ -10,19 +9,6 @@ window.onload = function () {
 };
 
 // Navigation
-const addNavClickHandler = () => {
-  const navigation = document.querySelector('.navigation__list');
-  const navItems = navigation.querySelectorAll('.navigation__item');
-
-  navigation.addEventListener('click', function (evt) {
-    let currentItem = evt.target;
-    navItems.forEach(item => {
-      item.classList.remove('navigation__item--active');
-    });
-    currentItem.closest('.navigation__item').classList.add('navigation__item--active');
-  });
-}
-
 const addScrollHandler = () => {
   document.addEventListener('scroll', onScroll);
 }
@@ -195,8 +181,8 @@ const addModalClickHandler = () => {
 
 const replaceTextInModal = () => {
   let modal = document.querySelector('.modal');
-  let subjectContent = document.querySelector('#subject-field').value;
-  let textareaContent = document.querySelector('#textarea').value;
+  let subjectContent = document.querySelector('#subject-field').value.toString();
+  let textareaContent = document.querySelector('#textarea').value.toString();
 
   if (subjectContent.length > 0) {
     modal.querySelector('.modal__subject-text').innerText = subjectContent;
