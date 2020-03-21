@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="style.css">
   <title>Singolo</title>
 </head>
-<body>
+<body class="body">
   <!-- SVG-sprite -->
   <div style="display:none">
     <svg xmlns="http://www.w3.org/2000/svg">
@@ -19,393 +19,399 @@
   </div>
 
   <!-- Header -->
-  <header class="header  container">
-    <div class="wrapper  header__wrapper">
-      <a class="header__logo">
-        <h1 class="logo">singolo<span>*</span></h1>
-      </a>
-      <nav class="navigation">
-        <ul class="navigation__list">
-          <li class="navigation__item  navigation__item--active"><a href="#">home</a></li>
-          <li class="navigation__item"><a href="#">services</a></li>
-          <li class="navigation__item"><a href="#">portfolio</a></li>
-          <li class="navigation__item"><a href="#">about</a></li>
-          <li class="navigation__item"><a href="#">contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+  <section class="container">
+    <header class="header">
+      <div class="wrapper  header__wrapper">
+        <a class="header__logo">
+          <h1 class="logo">singolo<span>*</span></h1>
+        </a>
+        <nav class="navigation">
+          <ul class="navigation__list">
+            <li class="navigation__item  navigation__item--active"><a href="#home">home</a></li>
+            <li class="navigation__item"><a href="#services">services</a></li>
+            <li class="navigation__item"><a href="#portfolio">portfolio</a></li>
+            <li class="navigation__item"><a href="#about">about</a></li>
+            <li class="navigation__item"><a href="#contact">contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+  </section>
 
   <!-- Main -->
-  <main class="main  container">
-
-    <!-- Slider -->
-    <section class="slider">
-      <div class="wrapper  slider__wrapper">
-        <h2 class="slider__title  visually-hidden">Promo products</h2>
-        <button class="arrow" type="button" name="button-arrow"></button>
-
-        <div class="slider__image">
-          <div class="phone  phone--vertical">
-            <img src="assets/images/iPhoneVertical.png" alt="phone" width="242" height="484">
-            <div class="phone__inner  phone__inner--vertical"></div>
-          </div>
-
-          <div class="phone  phone--horizontal">
-            <img src="assets/images/iPhoneHorizontal.png" alt="phone" width="485" height="241">
-            <div class="phone__inner  phone__inner--horizontal"></div>
-          </div>
-        </div>
-
+  <!-- Slider -->
+  <section class="slider  slider--1" id="home">
+    <div class="wrapper  slider__wrapper">
+      <h2 class="slider__title  visually-hidden">Promo products</h2>
+      <div class="slider__buttons">
+        <button class="arrow  arrow--left" type="button" name="button-arrow"></button>
         <button class="arrow  arrow--right" type="button" name="button-arrow"></button>
       </div>
-    </section>
 
-    <!-- Services -->
-    <section class="services">
-      <div class="wrapper">
-        <h2 class="services__title">Our Services</h2>
-        <p class="services__intro">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
-
-        <ul class="services__list">
-          <li class="services__features  services__features--pen">
-            <h3 class="services__f-title">Custom Design</h3>
-            <p class="services__f-description">Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam laoreet, viverra lacus ut, ultrices velit.</p>
-          </li>
-          <li class="services__features  services__features--bulb">
-            <h3 class="services__f-title">Inovative Ideas</h3>
-            <p class="services__f-description">Quisque luctus, quam eget molestie com&shy;modo, lacus purus cursus purus, nec rutrum tellus dolor id lorem.</p>
-          </li>
-          <li class="services__features  services__features--heart">
-            <h3 class="services__f-title">Love Is The Answer</h3>
-            <p class="services__f-description">Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis. Quisque condimentum.</p>
-          </li>
-          <li class="services__features  services__features--phone">
-            <h3 class="services__f-title">Responsive Layout</h3>
-            <p class="services__f-description">Sed porttitor placerat rhoncus. In at nunc tellus. Maecenas blandit nunc ligula. Prae&shy;sent elit leo.</p>
-          </li>
-          <li class="services__features  services__features--bubble">
-            <h3 class="services__f-title">2<span class="crutch">4/</span>7&thinsp;Support</h3>
-            <p class="services__f-description">Vivamus vel quam lacinia, tincidunt dui non, vehicula nisi. Nulla a sem erat. Pellen&shy;tesque egestas venenatis lorem .</p>
-          </li>
-          <li class="services__features  services__features--star">
-            <h3 class="services__f-title">Feel Like A Star</h3>
-            <p class="services__f-description">Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh. Fusce vitae aliquam tellus.</p>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- Portfolio -->
-    <section class="portfolio">
-      <div class="wrapper">
-        <h2 class="portfolio__title">Portfolio</h2>
-        <p class="portfolio__intro">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
-
-        <ul class="portfolio__classes">
-          <li class="portfolio__class">
-            <button class="portfolio__button  portfolio__button--active" type="button">All</button>
-          </li>
-          <li class="portfolio__class">
-            <button class="portfolio__button" type="button">Web Design</button>
-          </li>
-          <li class="portfolio__class">
-            <button class="portfolio__button" type="button">Graphic Design</button>
-          </li>
-          <li class="portfolio__class">
-            <button class="portfolio__button" type="button">Artwork</button>
-          </li>
-        </ul>
-
-        <ul class="portfolio__gallery">
-          <li class="portfolio__item">
-            <a href="#" class="portfolio__link">
-              <img src="assets/images/image-01.png" alt="artwork" class="portfolio__image" width="220" height="187">
-            </a>
-          </li>
-          <li class="portfolio__item">
-            <a href="#" class="portfolio__link">
-              <img src="assets/images/image-02.png" alt="artwork" class="portfolio__image" width="220" height="187">
-            </a>
-          </li>
-          <li class="portfolio__item">
-            <a href="#" class="portfolio__link">
-              <img src="assets/images/image-03.png" alt="artwork" class="portfolio__image" width="220" height="187">
-            </a>
-          </li>
-          <li class="portfolio__item">
-            <a href="#" class="portfolio__link">
-              <img src="assets/images/image-04.png" alt="artwork" class="portfolio__image" width="220" height="187">
-            </a>
-          </li>
-          <li class="portfolio__item">
-            <a href="#" class="portfolio__link">
-            <img src="assets/images/image-05.png" alt="artwork" class="portfolio__image" width="220" height="187">
-            </a>
-          </li>
-          <li class="portfolio__item">
-            <a href="#" class="portfolio__link">
-            <img src="assets/images/image-06.png" alt="artwork" class="portfolio__image" width="220" height="187">
-            </a>
-          </li>
-          <li class="portfolio__item">
-            <a href="#" class="portfolio__link">
-              <img src="assets/images/image-07.png" alt="artwork" class="portfolio__image" width="220" height="187">
-            </a>
-          </li>
-          <li class="portfolio__item">
-            <a href="#" class="portfolio__link">
-              <img src="assets/images/image-08.png" alt="artwork" class="portfolio__image" width="220" height="187">
-            </a>
-          </li>
-          <li class="portfolio__item">
-            <a href="#" class="portfolio__link">
-              <img src="assets/images/image-09.png" alt="artwork" class="portfolio__image" width="220" height="187">
-            </a>
-          </li>
-          <li class="portfolio__item">
-            <a href="#" class="portfolio__link">
-              <img src="assets/images/image-10.png" alt="artwork" class="portfolio__image" width="220" height="187">
-            </a>
-          </li>
-          <li class="portfolio__item">
-            <a href="#" class="portfolio__link">
-              <img src="assets/images/image-11.png" alt="artwork" class="portfolio__image" width="220" height="187">
-            </a>
-          </li>
-          <li class="portfolio__item">
-            <a href="#" class="portfolio__link">
-              <img src="assets/images/image-12.png" alt="artwork" class="portfolio__image" width="220" height="187">
-            </a>
-          </li>
-
-        </ul>
-      </div>
-    </section>
-
-    <!-- About Us -->
-    <section class="about">
-      <div class="wrapper">
-        <h2 class="about__title">About Us</h2>
-        <p class="about__intro">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
-        <div class="about__staff">
-
-          <div class="about__employee">
-            <img class="about__photo" src="assets/images/photo-1.png" alt="Adam Jensen" width="300" height="300">
-            <h3 class="about__name">Adam Jensen</h3>
-            <p class="about__text">Quisque luctus, quam eget molestie commodo, lacus purus cursus purus, nec rutrum tellus dolor id lorem.</p>
-
-            <!-- Social icons -->
-            <ul class="social">
-              <li>
-                <a href="#" class="social__button">
-                  <span class="visually-hidden">facebook</span>
-                  <svg width="32" height="32">
-                    <use xlink:href="#facebook"></use>
-                  </svg>
-                </a>
-              </li>
-              <li>
-                <a href="#" class="social__button">
-                  <span class="visually-hidden">google</span>
-                  <svg width="32" height="32">
-                    <use xlink:href="#google"></use>
-                  </svg>
-                </a>
-              </li>
-              <li>
-                <a href="#" class="social__button">
-                  <span class="visually-hidden">twitter</span>
-                  <svg width="32" height="32">
-                    <use xlink:href="#twitter"></use>
-                  </svg>
-                </a>
-              </li>
-              <li>
-                <a href="#"  class="social__button">
-                  <span class="visually-hidden">linkedin</span>
-                  <svg width="32" height="32">
-                    <use xlink:href="#linkedin"></use>
-                  </svg>
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <div class="about__employee  about__employee--center">
-            <img class="about__photo" src="assets/images/photo-2.png" alt="Adam Jensen" width="300" height="300">
-            <h3 class="about__name">Desmond Miles</h3>
-            <p class="about__text">Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam laoreet, viverra lacus ut, ultrices velit.</p>
-
-            <!-- Social icons -->
-            <ul class="social">
-              <li>
-                <a href="#" class="social__button">
-                  <span class="visually-hidden">facebook</span>
-                  <svg width="32" height="32">
-                    <use xlink:href="#facebook"></use>
-                  </svg>
-                </a>
-              </li>
-              <li>
-                <a href="#" class="social__button">
-                  <span class="visually-hidden">google</span>
-                  <svg width="32" height="32">
-                    <use xlink:href="#google"></use>
-                  </svg>
-                </a>
-              </li>
-              <li>
-                <a href="#" class="social__button">
-                  <span class="visually-hidden">twitter</span>
-                  <svg width="32" height="32">
-                    <use xlink:href="#twitter"></use>
-                  </svg>
-                </a>
-              </li>
-              <li>
-                <a href="#" class="social__button">
-                  <span class="visually-hidden">linkedin</span>
-                  <svg width="32" height="32">
-                    <use xlink:href="#linkedin"></use>
-                  </svg>
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <div class="about__employee">
-            <img class="about__photo" src="assets/images/photo-3.png" alt="Adam Jensen" width="300" height="300">
-            <h3 class="about__name">Scolara Visari</h3>
-            <p class="about__text">Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis. Quisque condimentum.</p>
-
-            <!-- Social icons -->
-            <ul class="social  about__social--right">
-              <li>
-                <a href="#"  class="social__button">
-                  <span class="visually-hidden">facebook</span>
-                  <svg width="32" height="32">
-                    <use xlink:href="#facebook"></use>
-                  </svg>
-                </a>
-              </li>
-              <li>
-                <a href="#" class="social__button">
-                  <span class="visually-hidden">google</span>
-                  <svg width="32" height="32">
-                    <use xlink:href="#google"></use>
-                  </svg>
-                </a>
-              </li>
-              <li>
-                <a href="#" class="social__button">
-                  <span class="visually-hidden">twitter</span>
-                  <svg width="32" height="32">
-                    <use xlink:href="#twitter"></use>
-                  </svg>
-                </a>
-              </li>
-              <li>
-                <a href="#"  class="social__button">
-                  <span class="visually-hidden">linkedin</span>
-                  <svg width="32" height="32">
-                    <use xlink:href="#linkedin"></use>
-                  </svg>
-                </a>
-              </li>
-            </ul>
-          </div>
-
+      <div class="slider__image  slider__image--1">
+        <div class="phone  phone--vertical">
+          <img src="assets/images/iPhoneVertical.png" alt="phone" width="242" height="484">
+          <div class="phone__button  phone__button--slide1-v"></div>
+          <div class="phone__inner  phone__inner--vertical"></div>
+        </div>
+        <div class="phone  phone--horizontal">
+          <img src="assets/images/iPhoneHorizontal.png" alt="phone" width="485" height="241">
+          <div class="phone__button  phone__button--slide1-h"></div>
+          <div class="phone__inner  phone__inner--horizontal"></div>
         </div>
       </div>
-    </section>
 
-    <!-- Get a Quote -->
-    <section class="quote">
-      <div class="wrapper">
-        <h2 class="quote__title">Get a Quote</h2>
-        <p class="quote__intro">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
-        <div class="quote__wrapper">
-
-          <!-- Form -->
-          <form class="form" action="#" method="POST">
-            <p class="form__fields">
-              <label class="visually-hidden" for="name-field">Your name</label>
-              <input class="field-text  form__name" type="text" name="name" id="name-field" placeholder="Name (Required)" minlength="2" maxlength="50" required>
-            </p>
-            <p class="form__fields">
-              <label class="visually-hidden" for="email-field">Your mail</label>
-              <input class="field-text  form__email" type="email" name="email" id="email-field" placeholder="Email (Required)" required>
-            </p>
-            <p class="form__fields">
-              <label class="visually-hidden" for="subject-field">Subject</label>
-              <input class="field-text  form__subject" type="text" name="subject" id="subject-field" placeholder="Subject">
-            </p>
-            <p class="form__fields">
-              <label class="visually-hidden" for="textarea">Describe your project in detail...</label>
-              <textarea class="field-text  form__textarea" name="feedback" id="textarea" cols="30" rows="10" placeholder="Describe your project in detail..."></textarea>
-            </p>
-            <button class="button" type="submit">Send</button>
-          </form>
-
-          <!-- Contacts -->
-          <div class="contacts">
-            <h3 class="contacts__title">Contact Information</h3>
-            <p class="contacts__intro">Quisque hendrerit purus dapibus, ornare nibh vitae, viver&shy;ra nibh. Fusce vitae aliquam tellus. Proin sit amet volutpat libero. Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis.</p>
-            <p class="contacts__info  contacts__info--address">Elm St. 14/05 Lost City</p>
-            <p class="contacts__info  contacts__info--phone">
-              <a class="contacts__link" href="tel:035111111111">03528 331 86 35</a>
-            </p>
-            <p class="contacts__info  contacts__info--mail">
-              <a class="contacts__link" href="mailto:info@singolo.com">info@singolo.com</a>
-            </p>
-          </div>
+      <div class="slider__image  slider__image--2  visually-hidden">
+        <div class="phone  phone--big">
+          <img src="assets/images/slider-2-big.png" alt="phone" width="255" height="513">
+          <div class="phone__button  phone__button--slide2-v"></div>
+          <div class="phone__inner  phone__inner--black  visually-hidden"></div>
         </div>
       </div>
-    </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="wrapper  footer__wrapper">
-        <p class="footer__copyright">&copy;&nbsp;Copyright 2013 · by PSDchat.com</p>
+    </div>
+  </section>
 
-        <!-- Social icons -->
-        <ul class="social">
-          <li>
-            <a href="#" class="social__button  social__button--footer">
-              <span class="visually-hidden">facebook</span>
-              <svg width="32" height="32">
-                <use xlink:href="#facebook"></use>
-              </svg>
-            </a>
-          </li>
-          <li>
-            <a href="#" class="social__button  social__button--footer">
-              <span class="visually-hidden">google</span>
-              <svg width="32" height="32">
-                <use xlink:href="#google"></use>
-              </svg>
-            </a>
-          </li>
-          <li>
-            <a href="#" class="social__button  social__button--footer">
-              <span class="visually-hidden">twitter</span>
-              <svg width="32" height="32">
-                <use xlink:href="#twitter"></use>
-              </svg>
-            </a>
-          </li>
-          <li>
-            <a href="#" class="social__button  social__button--footer">
-              <span class="visually-hidden">linkedin</span>
-              <svg width="32" height="32">
-                <use xlink:href="#linkedin"></use>
-              </svg>
-            </a>
-          </li>
-        </ul>
+  <!-- Services -->
+  <section class="services" id="services">
+    <div class="wrapper">
+      <h2 class="services__title">Our Services</h2>
+      <p class="services__intro">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
+
+      <ul class="services__list">
+        <li class="services__features  services__features--pen">
+          <h3 class="services__f-title">Custom Design</h3>
+          <p class="services__f-description">Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam laoreet, viverra lacus ut, ultrices velit.</p>
+        </li>
+        <li class="services__features  services__features--bulb">
+          <h3 class="services__f-title">Inovative Ideas</h3>
+          <p class="services__f-description">Quisque luctus, quam eget molestie com&shy;modo, lacus purus cursus purus, nec rutrum tellus dolor id lorem.</p>
+        </li>
+        <li class="services__features  services__features--heart">
+          <h3 class="services__f-title">Love Is The Answer</h3>
+          <p class="services__f-description">Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis. Quisque condimentum.</p>
+        </li>
+        <li class="services__features  services__features--phone">
+          <h3 class="services__f-title">Responsive Layout</h3>
+          <p class="services__f-description">Sed porttitor placerat rhoncus. In at nunc tellus. Maecenas blandit nunc ligula. Prae&shy;sent elit leo.</p>
+        </li>
+        <li class="services__features  services__features--bubble">
+          <h3 class="services__f-title">2<span class="crutch">4/</span>7&thinsp;Support</h3>
+          <p class="services__f-description">Vivamus vel quam lacinia, tincidunt dui non, vehicula nisi. Nulla a sem erat. Pellen&shy;tesque egestas venenatis lorem .</p>
+        </li>
+        <li class="services__features  services__features--star">
+          <h3 class="services__f-title">Feel Like A Star</h3>
+          <p class="services__f-description">Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh. Fusce vitae aliquam tellus.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Portfolio -->
+  <section class="portfolio" id="portfolio">
+    <div class="wrapper">
+      <h2 class="portfolio__title">Portfolio</h2>
+      <p class="portfolio__intro">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+
+      <ul class="portfolio__classes">
+        <li class="portfolio__class">
+          <button class="portfolio__button" type="button">All</button>
+        </li>
+        <li class="portfolio__class">
+          <button class="portfolio__button" type="button">Web Design</button>
+        </li>
+        <li class="portfolio__class">
+          <button class="portfolio__button" type="button">Graphic Design</button>
+        </li>
+        <li class="portfolio__class">
+          <button class="portfolio__button" type="button">Artwork</button>
+        </li>
+      </ul>
+
+      <ul class="portfolio__gallery">
+        <li class="portfolio__item  portfolio__item--bordered">
+          <img src="assets/images/image-01.png" alt="artwork" class="portfolio__image" width="220" height="187">
+        </li>
+
+        <li class="portfolio__item">
+          <img src="assets/images/image-02.png" alt="artwork" class="portfolio__image" width="220" height="187">
+        </li>
+
+        <li class="portfolio__item">
+          <img src="assets/images/image-03.png" alt="artwork" class="portfolio__image" width="220" height="187">
+        </li>
+
+        <li class="portfolio__item">
+          <img src="assets/images/image-04.png" alt="artwork" class="portfolio__image" width="220" height="187">
+        </li>
+
+        <li class="portfolio__item">
+          <img src="assets/images/image-05.png" alt="artwork" class="portfolio__image" width="220" height="187">
+        </li>
+
+        <li class="portfolio__item">
+          <img src="assets/images/image-06.png" alt="artwork" class="portfolio__image" width="220" height="187">
+        </li>
+
+        <li class="portfolio__item">
+          <img src="assets/images/image-07.png" alt="artwork" class="portfolio__image" width="220" height="187">
+        </li>
+
+        <li class="portfolio__item">
+          <img src="assets/images/image-08.png" alt="artwork" class="portfolio__image" width="220" height="187">
+        </li>
+
+        <li class="portfolio__item">
+          <img src="assets/images/image-09.png" alt="artwork" class="portfolio__image" width="220" height="187">
+        </li>
+
+        <li class="portfolio__item">
+          <img src="assets/images/image-10.png" alt="artwork" class="portfolio__image" width="220" height="187">
+        </li>
+
+        <li class="portfolio__item">
+          <img src="assets/images/image-11.png" alt="artwork" class="portfolio__image" width="220" height="187">
+        </li>
+
+        <li class="portfolio__item">
+          <img src="assets/images/image-12.png" alt="artwork" class="portfolio__image" width="220" height="187">
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- About Us -->
+  <section class="about" id="about">
+    <div class="wrapper">
+      <h2 class="about__title">About Us</h2>
+      <p class="about__intro">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
+      <div class="about__staff">
+
+        <div class="about__employee">
+          <img class="about__photo" src="assets/images/photo-1.png" alt="Adam Jensen" width="300" height="300">
+          <h3 class="about__name">Adam Jensen</h3>
+          <p class="about__text">Quisque luctus, quam eget molestie commodo, lacus purus cursus purus, nec rutrum tellus dolor id lorem.</p>
+
+          <!-- Social icons -->
+          <ul class="social">
+            <li>
+              <a href="#" class="social__button">
+                <span class="visually-hidden">facebook</span>
+                <svg width="32" height="32">
+                  <use xlink:href="#facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="social__button">
+                <span class="visually-hidden">google</span>
+                <svg width="32" height="32">
+                  <use xlink:href="#google"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="social__button">
+                <span class="visually-hidden">twitter</span>
+                <svg width="32" height="32">
+                  <use xlink:href="#twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#"  class="social__button">
+                <span class="visually-hidden">linkedin</span>
+                <svg width="32" height="32">
+                  <use xlink:href="#linkedin"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="about__employee  about__employee--center">
+          <img class="about__photo" src="assets/images/photo-2.png" alt="Adam Jensen" width="300" height="300">
+          <h3 class="about__name">Desmond Miles</h3>
+          <p class="about__text">Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam laoreet, viverra lacus ut, ultrices velit.</p>
+
+          <!-- Social icons -->
+          <ul class="social">
+            <li>
+              <a href="#" class="social__button">
+                <span class="visually-hidden">facebook</span>
+                <svg width="32" height="32">
+                  <use xlink:href="#facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="social__button">
+                <span class="visually-hidden">google</span>
+                <svg width="32" height="32">
+                  <use xlink:href="#google"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="social__button">
+                <span class="visually-hidden">twitter</span>
+                <svg width="32" height="32">
+                  <use xlink:href="#twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="social__button">
+                <span class="visually-hidden">linkedin</span>
+                <svg width="32" height="32">
+                  <use xlink:href="#linkedin"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="about__employee">
+          <img class="about__photo" src="assets/images/photo-3.png" alt="Adam Jensen" width="300" height="300">
+          <h3 class="about__name">Scolara Visari</h3>
+          <p class="about__text">Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis. Quisque condimentum.</p>
+
+          <!-- Social icons -->
+          <ul class="social  about__social--right">
+            <li>
+              <a href="#"  class="social__button">
+                <span class="visually-hidden">facebook</span>
+                <svg width="32" height="32">
+                  <use xlink:href="#facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="social__button">
+                <span class="visually-hidden">google</span>
+                <svg width="32" height="32">
+                  <use xlink:href="#google"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="social__button">
+                <span class="visually-hidden">twitter</span>
+                <svg width="32" height="32">
+                  <use xlink:href="#twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#"  class="social__button">
+                <span class="visually-hidden">linkedin</span>
+                <svg width="32" height="32">
+                  <use xlink:href="#linkedin"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+
       </div>
-    </footer>
-  </main>
+    </div>
+  </section>
+
+  <!-- Get a Quote -->
+  <section class="quote" id="contact">
+    <div class="wrapper">
+      <h2 class="quote__title">Get a Quote</h2>
+      <p class="quote__intro">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
+      <div class="quote__wrapper">
+
+        <!-- Form -->
+        <form class="form" action="#" method="POST">
+          <p class="form__fields">
+            <label class="visually-hidden" for="name-field">Your name</label>
+            <input class="field-text  form__name" type="text" name="name" id="name-field" placeholder="Name (Required)" minlength="2" maxlength="50" required>
+          </p>
+          <p class="form__fields">
+            <label class="visually-hidden" for="email-field">Your mail</label>
+            <input class="field-text  form__email" type="email" name="email" id="email-field" placeholder="Email (Required)" required>
+          </p>
+          <p class="form__fields">
+            <label class="visually-hidden" for="subject-field">Subject</label>
+            <input class="field-text  form__subject" type="text" name="subject" id="subject-field" placeholder="Subject">
+          </p>
+          <p class="form__fields">
+            <label class="visually-hidden" for="textarea">Describe your project in detail...</label>
+            <textarea class="field-text  form__textarea" name="feedback" id="textarea" cols="30" rows="10" maxlength="500" placeholder="Describe your project in detail..."></textarea>
+          </p>
+          <button class="button" type="submit">Send</button>
+        </form>
+
+        <!-- Contacts -->
+        <div class="contacts">
+          <h3 class="contacts__title">Contact Information</h3>
+          <p class="contacts__intro">Quisque hendrerit purus dapibus, ornare nibh vitae, viver&shy;ra nibh. Fusce vitae aliquam tellus. Proin sit amet volutpat libero. Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis.</p>
+          <p class="contacts__info  contacts__info--address">Elm St. 14/05 Lost City</p>
+          <p class="contacts__info  contacts__info--phone">
+            <a class="contacts__link" href="tel:035111111111">03528 331 86 35</a>
+          </p>
+          <p class="contacts__info  contacts__info--mail">
+            <a class="contacts__link" href="mailto:info@singolo.com">info@singolo.com</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="wrapper  footer__wrapper">
+      <p class="footer__copyright">&copy;&nbsp;Copyright 2013 · by PSDchat.com</p>
+
+      <!-- Social icons -->
+      <ul class="social">
+        <li>
+          <a href="#" class="social__button  social__button--footer">
+            <span class="visually-hidden">facebook</span>
+            <svg width="32" height="32">
+              <use xlink:href="#facebook"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="social__button  social__button--footer">
+            <span class="visually-hidden">google</span>
+            <svg width="32" height="32">
+              <use xlink:href="#google"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="social__button  social__button--footer">
+            <span class="visually-hidden">twitter</span>
+            <svg width="32" height="32">
+              <use xlink:href="#twitter"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="social__button  social__button--footer">
+            <span class="visually-hidden">linkedin</span>
+            <svg width="32" height="32">
+              <use xlink:href="#linkedin"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+
+  <section class="modal">
+    <h4 class="modal__title">The letter was sent</h4>
+    <p class="modal__subject"><b>Subject: </b><span class="modal__subject-text">Singolo</span></p>
+    <p class="modal__description"><b>Description: </b><span class="modal__description-text">Portfolio project</span></p>
+    <button type="button" class="modal__button  button  button--modal">OK</button>
+  </section>
+  <div class="modal-overlay"></div>
+
+  <script src="script.js"></script>
 </body>
 </html>
