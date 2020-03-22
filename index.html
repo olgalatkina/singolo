@@ -6,6 +6,37 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
   <link rel="stylesheet" href="style.css">
   <title>Singolo</title>
+  <!-- Pixel Glass -->
+  <style>
+    HTML {
+      background-repeat: no-repeat;
+      background-position:  50% 0;
+      /* По умолчанию показывается  декстопный макет */
+      background-image: url("./assets/images/pixel-glass/dt-1020.png");
+    }
+
+    /* Tablet */
+    @media ( max-width: 768px ) {
+      HTML {
+        /* Планшетный макет */
+        background-image: url("./assets/images/pixel-glass/tablet-768.png");
+      }
+    }
+    /* Mobile */
+    @media ( max-width: 375px ) {
+      HTML {
+        /* мобильный макет */
+        background-image: url("./assets/images/pixel-glass/mobile-375.png");
+      }
+    }
+
+    BODY {
+      opacity: .5;
+    }
+  </style>
+  <link href="node_modules/pixel-glass/styles.css" rel="stylesheet">
+  <script src="node_modules/pixel-glass/script.js"></script>
+  <!-- Pixel Glass -->
 </head>
 <body class="body">
   <!-- SVG-sprite -->

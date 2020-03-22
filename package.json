@@ -1,0 +1,23 @@
+{
+  "name": "singolo",
+  "version": "1.0.0",
+  "description": "* [dom](https://olgalatkina.github.io/singolo/index.html)",
+  "main": "script.js",
+  "dependencies": {},
+  "devDependencies": {
+    "pixel-glass": "^1.0.13"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/olgalatkina/singolo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/olgalatkina/singolo/issues"
+  },
+  "homepage": "https://github.com/olgalatkina/singolo#readme"
+}
