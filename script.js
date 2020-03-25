@@ -1,4 +1,5 @@
 window.onload = function () {
+  addHamburgerHandler();
   addScrollHandler();
   addSlider();
   addTagClickHandler();
@@ -9,6 +10,33 @@ window.onload = function () {
 };
 
 // Navigation
+const addHamburgerHandler = () => {
+  const headerWrapper = document.querySelector('.header__wrapper');
+  const hamburger = headerWrapper.querySelector('.hamburger');
+  const hamburgerModal = headerWrapper.querySelector('.hamburger--modal');
+  const modalMenu = headerWrapper.querySelector('.modal-menu');
+  const navigation = headerWrapper.querySelector('.navigation');
+  const navList = document.querySelector('.navigation__list');
+
+  hamburger.addEventListener('click', function () {
+    headerWrapper.classList.toggle('header__wrapper--modal');
+    modalMenu.classList.toggle('modal-menu--open');
+    navigation.classList.toggle('navigation--modal');
+  });
+
+  hamburgerModal.addEventListener('click', function () {
+    headerWrapper.classList.toggle('header__wrapper--modal');
+    modalMenu.classList.toggle('modal-menu--open');
+    navigation.classList.toggle('navigation--modal');
+  });
+
+  navList.addEventListener('click', function () {
+    headerWrapper.classList.remove('header__wrapper--modal');
+    modalMenu.classList.remove('modal-menu--open');
+    navigation.classList.remove('navigation--modal');
+  })
+}
+
 const addScrollHandler = () => {
   document.addEventListener('scroll', onScroll);
 }
@@ -17,7 +45,9 @@ const onScroll = (evt) => {
   const currentPosition = window.scrollY;
   const sections = document.querySelectorAll('.body>*[id]');
   const navItems = document.querySelectorAll('.navigation__item');
-  const headerHeight = 95;
+  const clientWidth = document.documentElement.clientWidth;
+  let headerHeight;
+  clientWidth <= 590 ? headerHeight = 71 : headerHeight = 95;
 
   sections.forEach((elem) => {
     if (elem.offsetTop - headerHeight <= currentPosition &&
@@ -108,7 +138,10 @@ const getRandomWorkList = () => {
 }
 
 const renderImagesToDom = () => {
-  const randomWorkList = getRandomWorkList();
+  let randomWorkList = getRandomWorkList();
+  if (document.documentElement.clientWidth <= 375) {
+    randomWorkList = randomWorkList.slice(0, 8);
+  }
   const gallery = portfolio.querySelector('.portfolio__gallery');
   gallery.innerText = '';
   randomWorkList.forEach(elem => {
