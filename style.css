@@ -566,7 +566,7 @@ img {
   }
 
   .phone__button--slide1-v {
-    bottom: 4vw;
+    bottom: 4.5vw;
     left: 8.5vw;
   }
 
@@ -582,13 +582,13 @@ img {
 
   .phone__inner--vertical {
     top: 6.4vw;
-    left: 1.4vw;
+    left: 1.5vw;
     width: 18.4vw;
     height: 32.6vw;
   }
 
   .phone__inner--horizontal {
-    top: -5.5vw;
+    top: -5.7vw;
     left: 12.9vw;
     height: 32.4vw;
     width: 18.3vw;
@@ -908,6 +908,11 @@ img {
 
 .portfolio__item:nth-child(1n + 13) {
   display: none;
+}
+
+.portfolio__image:hover {
+  transform: scale(1.02);
+  transition: all 0.3s linear;
 }
 
 .portfolio__image--bordered {

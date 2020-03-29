@@ -236,7 +236,6 @@ const addFormClickHandler = () => {
       evt.preventDefault();
       if (evt.target.classList.contains('button')) {
         replaceTextInModal();
-        form.reset();
         modal.classList.add('modal-show');
         overlay.classList.add('modal-overlay-show');
       }
@@ -245,19 +244,23 @@ const addFormClickHandler = () => {
 }
 
 const addModalClickHandler = () => {
+  const form = document.querySelector('.form');
   const modal = document.querySelector('.modal');
   const overlay = document.querySelector('.modal-overlay');
   modal.addEventListener("click", function (evt) {
     if (evt.target.classList.contains('modal__button')) {
       evt.preventDefault();
+      form.reset();
       modal.classList.remove('modal-show');
       overlay.classList.remove('modal-overlay-show');
     }
   });
 
   window.addEventListener("keydown", function (evt) {
+    const form = document.querySelector('.form');
     if (evt.keyCode === 27) {
       evt.preventDefault();
+      form.reset();
       if (modal.classList.contains("modal-show")) {
         modal.classList.remove("modal-show");
         modal.classList.remove("modal-error");
@@ -277,12 +280,12 @@ const replaceTextInModal = () => {
   if (subjectContent.length > 0) {
     modal.querySelector('.modal__subject-text').innerText = subjectContent;
   } else {
-    modal.querySelector('.modal__subject').innerText = 'Without subject';
+    modal.querySelector('.modal__subject').innerText = 'No subject';
   }
 
   if (textareaContent.length > 0) {
     modal.querySelector('.modal__description-text').innerText = textareaContent;
   } else {
-    modal.querySelector('.modal__description').innerText = 'Without description';
+    modal.querySelector('.modal__description').innerText = 'No description';
   }
 }
