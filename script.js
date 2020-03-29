@@ -3,6 +3,7 @@ window.onload = function () {
   addScrollHandler();
   addHamburgerHandler();
   // addSlider();
+  addToggleScreenPhone();
   addTagClickHandler();
   addImageClickHandler();
   addFormClickHandler();
@@ -79,6 +80,10 @@ const addHamburgerHandler = () => {
 }
 
 // Slider
+const addSlider = () => {
+
+}
+
 // const addSlider = () => {
 //   const slider = document.querySelector('.slider');
 //   const slider1 = slider.querySelector('.slider__image--1');
@@ -111,6 +116,24 @@ const addHamburgerHandler = () => {
 //     }
 //   });
 // }
+
+const addToggleScreenPhone = () => {
+  const phoneButtons = document.querySelectorAll('.phone__button');
+
+  phoneButtons.forEach((btn) => btn.addEventListener('click', function (event) {
+      const verticalPhone = document.querySelector('.phone--vertical');
+      const horizontalPhone = document.querySelector('.phone--horizontal');
+      const verticalBlackScreen = document.querySelector('.phone__inner--vertical');
+      const horizontalBlackScreen = document.querySelector('.phone__inner--horizontal');
+
+     if (verticalPhone.contains(btn)) {
+       verticalBlackScreen.hidden = !verticalBlackScreen.hidden;
+     }
+     if (horizontalPhone.contains(btn)) {
+       horizontalBlackScreen.hidden = !horizontalBlackScreen.hidden;
+     }
+  }))
+}
 
 // Portfolio
 const addTagClickHandler = () => {
