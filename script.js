@@ -55,27 +55,25 @@ const onScroll = (evt) => {
 const addHamburgerHandler = () => {
   const headerWrapper = document.querySelector('.header__wrapper');
   const hamburger = headerWrapper.querySelector('.hamburger');
-  const hamburgerModal = headerWrapper.querySelector('.hamburger--modal');
-  const modalMenu = headerWrapper.querySelector('.modal-menu');
   const navigation = headerWrapper.querySelector('.navigation');
-  const navList = document.querySelector('.navigation__list');
+  const navList = headerWrapper.querySelector('.navigation__list');
+  const overlayMobile = document.querySelector('.overlay-mobile');
+  const body = document.querySelector('.body');
 
   hamburger.addEventListener('click', function () {
     headerWrapper.classList.toggle('header__wrapper--modal');
-    modalMenu.classList.toggle('modal-menu--open');
+    hamburger.classList.toggle('hamburger--modal');
     navigation.classList.toggle('navigation--modal');
-  });
-
-  hamburgerModal.addEventListener('click', function () {
-    headerWrapper.classList.toggle('header__wrapper--modal');
-    modalMenu.classList.toggle('modal-menu--open');
-    navigation.classList.toggle('navigation--modal');
+    overlayMobile.classList.toggle('overlay-mobile--active');
+    body.classList.toggle('scroll-hidden');
   });
 
   navList.addEventListener('click', function () {
     headerWrapper.classList.remove('header__wrapper--modal');
-    modalMenu.classList.remove('modal-menu--open');
+    hamburger.classList.remove('hamburger--modal');
     navigation.classList.remove('navigation--modal');
+    overlayMobile.classList.remove('overlay-mobile--active');
+    body.classList.toggle('scroll-hidden');
   })
 }
 
