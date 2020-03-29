@@ -276,13 +276,13 @@ const replaceTextInModal = () => {
   let textareaContent = document.querySelector('#textarea').value.toString();
 
   if (subjectContent.length > 0) {
-    modal.querySelector('.modal__subject-text').innerText = subjectContent;
+    modal.querySelector('.modal__subject').innerText = 'Subject: ' + subjectContent;
   } else {
     modal.querySelector('.modal__subject').innerText = 'No subject';
   }
 
   if (textareaContent.length > 0) {
-    modal.querySelector('.modal__description-text').innerText = textareaContent;
+    modal.querySelector('.modal__description').innerText = 'Description: ' + textareaContent;
   } else {
     modal.querySelector('.modal__description').innerText = 'No description';
   }
