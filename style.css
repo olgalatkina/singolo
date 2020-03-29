@@ -320,7 +320,6 @@ img {
   max-width: 100%;
 }
 
-/* было .overlay-mobile.active */
 @media (max-width: 767px) {
   .overlay-mobile--active {
     background: #2D303A;

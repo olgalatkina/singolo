@@ -2,7 +2,7 @@ window.onload = function () {
   addNavHandler();
   addScrollHandler();
   addHamburgerHandler();
-  // addSlider();
+  addSlider();
   addToggleScreenPhone();
   addTagClickHandler();
   addImageClickHandler();
@@ -81,41 +81,64 @@ const addHamburgerHandler = () => {
 
 // Slider
 const addSlider = () => {
+  let phones = document.querySelectorAll('.slider__image');
+  let currentSlide = 0;
+  let isEnabled = true;
+  let slider = document.querySelector("body > .slider");
 
+  function changeCurrentSlide (n) {
+    currentSlide = ( n + phones.length ) % phones.length;
+  }
+
+  function hideSlide(direction) {
+    isEnabled = false;
+    phones[currentSlide].classList.add(direction);
+    phones[currentSlide].addEventListener('animationend', function() {
+      this.classList.remove('activated', direction);
+    })
+  }
+
+  function showSlide(direction) {
+    phones[currentSlide].classList.add('next', direction);
+    phones[currentSlide].addEventListener('animationend', function() {
+      this.classList.remove('next', direction);
+      this.classList.add('activated');
+      isEnabled = true;
+    })
+
+    if (currentSlide === 1) {
+      slider.classList.remove('slider--1');
+      slider.classList.add('slider--2');
+    } else {
+      slider.classList.remove('slider--2');
+      slider.classList.add('slider--1');
+    }
+  }
+
+  function previousSlide (n) {
+    hideSlide('to-right');
+    changeCurrentSlide(n-1);
+    showSlide('from-left');
+  }
+
+  function nextSlide (n) {
+    hideSlide('to-left');
+    changeCurrentSlide(n+1);
+    showSlide('from-right');
+  }
+
+  document.querySelector('.slider__buttons .arrow--left').addEventListener('click', function() {
+    if (isEnabled) {
+        previousSlide(currentSlide);
+    }
+  })
+
+  document.querySelector('.slider__buttons .arrow--right').addEventListener('click', function() {
+    if (isEnabled) {
+        nextSlide(currentSlide);
+    }
+  })
 }
-
-// const addSlider = () => {
-//   const slider = document.querySelector('.slider');
-//   const slider1 = slider.querySelector('.slider__image--1');
-//   const slider2 = slider.querySelector('.slider__image--2');
-
-//   const arrowLeft = slider.querySelector('.arrow--left');
-//   const arrowRight = slider.querySelector('.arrow--right');
-
-//   const phoneInnerVertical = slider.querySelector('.phone__inner--vertical');
-//   const phoneInnerHorizontal = slider.querySelector('.phone__inner--horizontal');
-
-//   slider.addEventListener('click', function (evt) {
-//     if (evt.target === arrowLeft) {
-//       slider.classList.toggle('slider--1');
-//       slider.classList.toggle('slider--2');
-//       slider1.classList.toggle('visually-hidden');
-//       slider2.classList.toggle('visually-hidden');
-//     }
-//     if (evt.target === arrowRight) {
-//       slider.classList.toggle('slider--1');
-//       slider.classList.toggle('slider--2');
-//       slider1.classList.toggle('visually-hidden');
-//       slider2.classList.toggle('visually-hidden');
-//     }
-//     if (event.target.classList.contains('phone__button--slide1-v')) {
-//       phoneInnerVertical.classList.toggle('visually-hidden');
-//     }
-//     if (event.target.classList.contains('phone__button--slide1-h')) {
-//       phoneInnerHorizontal.classList.toggle('visually-hidden');
-//     }
-//   });
-// }
 
 const addToggleScreenPhone = () => {
   const phoneButtons = document.querySelectorAll('.phone__button');
