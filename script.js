@@ -1,7 +1,8 @@
 window.onload = function () {
-  addHamburgerHandler();
+  addNavHandler();
   addScrollHandler();
-  addSlider();
+  addHamburgerHandler();
+  // addSlider();
   addTagClickHandler();
   addImageClickHandler();
   addFormClickHandler();
@@ -10,6 +11,46 @@ window.onload = function () {
 };
 
 // Navigation
+const addNavHandler = () => {
+  const navigation = document.querySelector('.navigation__list');
+  const navLink = navigation.querySelectorAll('.navigation__item a');
+
+  navigation.addEventListener('click', (evt) => {
+    if(evt.target.closest('a')) {
+      navLink.forEach(element => {
+        element.classList.remove('navigation__item--active')
+      });
+      evt.target.classList.add('navigation__item--active');
+    }
+  });
+}
+
+const addScrollHandler = () => {
+  document.addEventListener('scroll', onScroll);
+}
+
+const onScroll = (evt) => {
+  const currentPosition = window.scrollY;
+  const sections = document.querySelectorAll('.body>*[id]');
+  const navItems = document.querySelectorAll('.navigation__item');
+  const clientWidth = document.documentElement.clientWidth;
+  let headerHeight;
+  clientWidth <= 767 ? headerHeight = 71 : headerHeight = 95;
+
+  sections.forEach((elem) => {
+    if (elem.offsetTop - headerHeight <= currentPosition &&
+       (elem.offsetTop + elem.offsetHeight) > currentPosition) {
+      navItems.forEach(item => {
+        item.classList.remove('navigation__item--active');
+
+        if (elem.getAttribute('id') === item.textContent) {
+          item.classList.add('navigation__item--active');
+        }
+      });
+    }
+  })
+}
+
 const addHamburgerHandler = () => {
   const headerWrapper = document.querySelector('.header__wrapper');
   const hamburger = headerWrapper.querySelector('.hamburger');
@@ -37,69 +78,39 @@ const addHamburgerHandler = () => {
   })
 }
 
-const addScrollHandler = () => {
-  document.addEventListener('scroll', onScroll);
-}
-
-const onScroll = (evt) => {
-  const currentPosition = window.scrollY;
-  const sections = document.querySelectorAll('.body>*[id]');
-  const navItems = document.querySelectorAll('.navigation__item');
-  const clientWidth = document.documentElement.clientWidth;
-  let headerHeight;
-  clientWidth <= 590 ? headerHeight = 71 : headerHeight = 95;
-
-  sections.forEach((elem) => {
-    if (elem.offsetTop - headerHeight <= currentPosition &&
-       (elem.offsetTop + elem.offsetHeight) > currentPosition) {
-      navItems.forEach(item => {
-        item.classList.remove('navigation__item--active');
-
-        if (elem.getAttribute('id') === item.textContent) {
-          item.classList.add('navigation__item--active');
-        }
-      });
-    }
-  })
-}
-
 // Slider
-const addSlider = () => {
-  const slider = document.querySelector('.slider');
-  const slider1 = slider.querySelector('.slider__image--1');
-  const slider2 = slider.querySelector('.slider__image--2');
+// const addSlider = () => {
+//   const slider = document.querySelector('.slider');
+//   const slider1 = slider.querySelector('.slider__image--1');
+//   const slider2 = slider.querySelector('.slider__image--2');
 
-  const arrowLeft = slider.querySelector('.arrow--left');
-  const arrowRight = slider.querySelector('.arrow--right');
+//   const arrowLeft = slider.querySelector('.arrow--left');
+//   const arrowRight = slider.querySelector('.arrow--right');
 
-  const phoneInnerVertical = slider.querySelector('.phone__inner--vertical');
-  const phoneInnerHorizontal = slider.querySelector('.phone__inner--horizontal');
-  const blackScreen = slider.querySelector('.phone__inner--black');
+//   const phoneInnerVertical = slider.querySelector('.phone__inner--vertical');
+//   const phoneInnerHorizontal = slider.querySelector('.phone__inner--horizontal');
 
-  slider.addEventListener('click', function (evt) {
-    if (evt.target === arrowLeft) {
-      slider.classList.toggle('slider--1');
-      slider.classList.toggle('slider--2');
-      slider1.classList.toggle('visually-hidden');
-      slider2.classList.toggle('visually-hidden');
-    }
-    if (evt.target === arrowRight) {
-      slider.classList.toggle('slider--1');
-      slider.classList.toggle('slider--2');
-      slider1.classList.toggle('visually-hidden');
-      slider2.classList.toggle('visually-hidden');
-    }
-    if (event.target.classList.contains('phone__button--slide1-v')) {
-      phoneInnerVertical.classList.toggle('visually-hidden');
-    }
-    if (event.target.classList.contains('phone__button--slide1-h')) {
-      phoneInnerHorizontal.classList.toggle('visually-hidden');
-    }
-    if (event.target.classList.contains('phone__button--slide2-v')) {
-      blackScreen.classList.toggle('visually-hidden');
-    }
-  });
-}
+//   slider.addEventListener('click', function (evt) {
+//     if (evt.target === arrowLeft) {
+//       slider.classList.toggle('slider--1');
+//       slider.classList.toggle('slider--2');
+//       slider1.classList.toggle('visually-hidden');
+//       slider2.classList.toggle('visually-hidden');
+//     }
+//     if (evt.target === arrowRight) {
+//       slider.classList.toggle('slider--1');
+//       slider.classList.toggle('slider--2');
+//       slider1.classList.toggle('visually-hidden');
+//       slider2.classList.toggle('visually-hidden');
+//     }
+//     if (event.target.classList.contains('phone__button--slide1-v')) {
+//       phoneInnerVertical.classList.toggle('visually-hidden');
+//     }
+//     if (event.target.classList.contains('phone__button--slide1-h')) {
+//       phoneInnerHorizontal.classList.toggle('visually-hidden');
+//     }
+//   });
+// }
 
 // Portfolio
 const addTagClickHandler = () => {
@@ -139,7 +150,7 @@ const getRandomWorkList = () => {
 
 const renderImagesToDom = () => {
   let randomWorkList = getRandomWorkList();
-  if (document.documentElement.clientWidth <= 375) {
+  if (document.documentElement.clientWidth <= 767) {
     randomWorkList = randomWorkList.slice(0, 8);
   }
   const gallery = portfolio.querySelector('.portfolio__gallery');
