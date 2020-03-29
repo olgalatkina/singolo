@@ -9,3 +9,5 @@ layouts/
 .vscode
 .publish
 Thumbs.db
+node_modules/
+assets/images/pixel-glass/
